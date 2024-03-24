@@ -1,102 +1,51 @@
 // Library Imports
-import { useState, useEffect } from "react";
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav } from "reactstrap";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 // Functions, Helpers, Utils, and Hooks
 import useWindowWidth from "../../../hooks/useWindowWidth";
-// Constants
-import { navbarStrings } from "../../../constants/language-strings/navbarStrings";
 // Components
-import { NavCallToAction } from "./dependents/NavCallToAction";
 import { AnimatedNavLink } from "./dependents/AnimatedNavLink";
 // CSS
 import "./navbar.scss";
 // Assets and Images
-import logoWithText from "../../../assets/images/logo/Full_Logo.png";
-import logoNoText from "../../../assets/images/logo/Logo_No_Text.png";
+import logo from "../../../assets/images/logo/logo.png";
 
-export const NavBar = ({
-  adminVariant,
-}: {
-  adminVariant: boolean;
-}) => {
+const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
-
   const windowWidth = useWindowWidth();
-  const [navLogo, setNavLogo] = useState(logoWithText);
-
-  const { home, practiceAreas, aboutUs, clientReviews, ourResults, contactUs } =
-    navbarStrings;
-
-  useEffect(() => {
-    if (windowWidth >= 950) {
-      setNavLogo(logoWithText);
-    } else {
-      setNavLogo(logoNoText);
-    }
-  }, [windowWidth]);
-
-  if (adminVariant === true) {
-    return <></>;
-  }
+  
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <nav>
-      <NavCallToAction theme={theme} language={language} />
-      <Navbar expand="md" className={`navbar ${theme}-variant`}>
-        <NavbarBrand href="/" className="ms-3">
-          <img className="ms-4" src={navLogo} />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ms-auto" navbar>
-            <AnimatedNavLink
-              linkText={language === "English" ? home.english : home.spanish}
-              url="/"
-              preserveState={[["language", language]]}
-            />
-            <AnimatedNavLink
-              linkText={
-                language === "English"
-                  ? practiceAreas.english
-                  : practiceAreas.spanish
-              }
-              url="/practice-areas"
-              preserveState={[["language", language]]}
-            />
-            <AnimatedNavLink
-              linkText={
-                language === "English" ? aboutUs.english : aboutUs.spanish
-              }
-              url="/about-us"
-              preserveState={[["language", language]]}
-            />
-            <AnimatedNavLink
-              linkText={
-                language === "English"
-                  ? clientReviews.english
-                  : clientReviews.spanish
-              }
-              url="/client-reviews"
-              preserveState={[["language", language]]}
-            />
-            <AnimatedNavLink
-              linkText={
-                language === "English" ? ourResults.english : ourResults.spanish
-              }
-              url="/our-results"
-              preserveState={[["language", language]]}
-            />
-            <AnimatedNavLink
-              linkText={
-                language === "English" ? contactUs.english : contactUs.spanish
-              }
-              url="/contact-us"
-              preserveState={[["language", language]]}
-            />
-          </Nav>
-        </Collapse>
-      </Navbar>
+    <nav className="navbar">
+      <div className="navbar-brand">
+        <Link to="/">Your Logo</Link>
+        {windowWidth <= 768 && (
+          <button className="navbar-toggle" onClick={toggleMenu}>
+            <span className="navbar-toggle-icon">&#9776;</span>
+          </button>
+        )}
+      </div>
+      {(isOpen || windowWidth > 768) && (
+        <div className="navbar-menu">
+          <ul>
+            <li>
+              <AnimatedNavLink linkText="Home" url="/" />
+            </li>
+            <li>
+              <AnimatedNavLink linkText="About" url="/about" />
+            </li>
+            <li>
+              <AnimatedNavLink linkText="Contact Us" url="/contact-us" />
+            </li>
+            {/* Add more menu items */}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };
+
+export default Navbar;

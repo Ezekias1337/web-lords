@@ -14,7 +14,7 @@ import "./footer.scss";
 // Assets and Images
 import logo from "../../../assets/images/logo/Full_Logo.png";
 
-export const Footer = () => {
+const Footer = () => {
   const {
     contactColumn,
     infoColumn,
@@ -194,3 +194,5 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
