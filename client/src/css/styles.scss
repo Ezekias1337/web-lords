@@ -1,0 +1,176 @@
+@import "variables";
+
+/* 
+  General Styling
+*/
+
+body {
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $neutral-900;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-500;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary-700;
+}
+
+::-moz-selection {
+  background: $primary-500;
+  color: $neutral-100;
+}
+
+::selection {
+  background: $primary-500;
+  color: $neutral-100;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.full-width-height {
+  width: 100%;
+  height: 100%;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.full-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space-around-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.justify-content-center {
+  justify-content: center;
+  justify-content: left;
+  justify-content: right;
+}
+
+.justify-content-left {
+  justify-content: left;
+}
+
+.justify-content-right {
+  justify-content: right;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-top {
+  align-items: start;
+}
+
+.align-items-bottom {
+  align-items: end;
+}
+
+.margin-left-and-right {
+  margin-left: 11.5%;
+  margin-right: 11.5%;
+}
+
+.padding-left-and-right {
+  padding-left: 11.5%;
+  padding-right: 11.5%;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: $header-1 !important;
+}
+
+h2 {
+  font-size: $header-2 !important;
+}
+
+h3 {
+  font-size: $header-3 !important;
+}
+
+span {
+  font-size: $general !important;
+}
+
+p {
+  font-size: $body !important;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0 !important;
+}
+
+.page-title {
+  @extend .full-flex;
+  @extend .bold-text;
+}
+
+.z-index-0 {
+  z-index: 0;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.semi-dark-image-overlay {
+  background-color: $transparent-black-200 !important;
+  background-blend-mode: multiply;
+}
+
+.dark-image-overlay {
+  background-color: $transparent-black-800 !important;
+  background-blend-mode: multiply;
+}

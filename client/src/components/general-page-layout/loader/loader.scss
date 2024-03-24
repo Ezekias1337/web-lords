@@ -1,0 +1,112 @@
+@import "../../../css/variables";
+
+#loaderElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 39px;
+}
+
+#loaderElement div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  min-width: 34px;
+  min-height: 34px;
+  margin: 8px;
+  //border: 8px solid $brown;
+  border-radius: 50%;
+  -webkit-animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  //border-color: $brown transparent transparent transparent;
+}
+
+#loaderElement div:nth-child(1) {
+  -webkit-animation-delay: -0.45s;
+  animation-delay: -0.45s;
+}
+
+#loaderElement div:nth-child(2) {
+  -webkit-animation-delay: -0.3s;
+  animation-delay: -0.3s;
+}
+
+#loaderElement div:nth-child(3) {
+  -webkit-animation-delay: -0.15s;
+  animation-delay: -0.15s;
+}
+
+@-webkit-keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-primary {
+  &#loaderElement div {
+    border: 5px solid $primary-color;
+    border-color: $primary-color transparent transparent transparent;
+  }
+}
+
+.loader-secondary {
+  &#loaderElement div {
+    border: 5px solid $secondary-color;
+    border-color: $secondary-color transparent transparent transparent;
+  }
+}
+
+.loader-tertiary {
+  &#loaderElement div {
+    border: 5px solid $tertiary-color;
+    border-color: $tertiary-color transparent transparent transparent;
+  }
+}
+
+.loader-quarternary {
+  &#loaderElement div {
+    border: 5px solid $quarternary-color;
+    border-color: $quarternary-color transparent transparent transparent;
+  }
+}
+
+.loader-quinternary {
+  &#loaderElement div {
+    border: 5px solid $quinternary-color;
+    border-color: $quinternary-color transparent transparent transparent;
+  }
+}
+
+.loader-neutral {
+  &#loaderElement div {
+    border: 5px solid $neutral;
+    border-color: $neutral transparent transparent transparent;
+  }
+}
+
+.loader-success {
+  &#loaderElement div {
+    border: 5px solid $success;
+    border-color: $success transparent transparent transparent;
+  }
+}
+
+.loader-error {
+  &#loaderElement div {
+    border: 5px solid $error;
+    border-color: $error transparent transparent transparent;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../css/variables";
+
+.general-link {
+  font-size: $general;
+  &.dark-link {
+    color: $primary-color;
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+
+  &.light-link {
+    color: $neutral;
+    &:hover {
+      color: $light-gray;
+    }
+  }
+}

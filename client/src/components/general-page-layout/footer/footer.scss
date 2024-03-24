@@ -1,0 +1,134 @@
+@import "../../../css/variables";
+
+.footer {
+  background-color: $primary-color;
+  width: 100vw;
+}
+
+.footer-logo-col {
+  width: 105px;
+}
+
+.footer-logo {
+  width: 100%;
+}
+
+.social-col {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px $light-gray solid;
+}
+
+.footer-social-wrapper svg {
+  width: 36px;
+  height: 36px;
+  color: $light-gray;
+}
+
+.footer-social-wrapper:hover {
+  border: 1px $neutral solid;
+  box-shadow: 0px 4px 3px $neutral;
+
+  svg {
+    color: $neutral;
+  }
+}
+
+.footer-navigation {
+  background-color: $light-gray;
+
+  @media (max-width: 768px) {
+    .col:first-of-type {
+      display: none;
+    }
+  }
+}
+
+.footer-navigation a {
+  color: $primary-color;
+  text-decoration: none;
+  font-size: 18px;
+
+  .footer-navigation-underline {
+    background-color: $secondary-color;
+  }
+}
+
+.footer-copywrite-disclaimer-wrapper a {
+  color: $neutral;
+  text-decoration: none;
+  font-size: 18px;
+
+  .footer-navigation-underline {
+    background-color: $neutral;
+  }
+}
+
+.footer-navigation a:hover,
+.footer-copywrite-disclaimer-wrapper a:hover {
+  .footer-navigation-underline {
+    width: 100%;
+    transition: 0.3s;
+  }
+}
+
+.footer-navigation a:hover {
+  color: $secondary-color;
+}
+
+.footer-copywrite-disclaimer-wrapper a:hover {
+  color: $light-gray;
+}
+
+.footer-navigation-header {
+  color: $primary-color;
+  font-size: 31.98px;
+  padding-bottom: 20px;
+}
+
+.footer-navigation-underline {
+  height: 2.5px;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.copywrite-container {
+  align-items: center;
+  
+  @media (max-width: 768px) {
+    padding-top: 10px;
+  }
+}
+
+.footer-copywrite-disclaimer-wrapper {
+  @media (max-width: 768px) {
+    small {
+      text-align: center;
+    }
+    
+    .col {
+      padding-top: 10px;
+    }
+  }
+}
+
+.copywrite-disclaimer {
+  color: $neutral;
+  font-size: 18px;
+}
+
+.copywrite-link {
+  justify-content: right !important;
+}
+
+.footer-navigation-link {
+  display: flex;
+  text-align: center;
+}

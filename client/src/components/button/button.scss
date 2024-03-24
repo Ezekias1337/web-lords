@@ -1,0 +1,146 @@
+@import "../../css/variables";
+
+.no-underline {
+  text-decoration: none;
+}
+
+.button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+
+  /* Select icon when it is on the left of the text */
+  > svg.left-icon:first-child {
+    padding-right: 16px;
+  }
+
+  /* Select icon when it is on the right of the text */
+  > svg.right-icon:last-child {
+    padding-left: 16px;
+  }
+
+  &.small-button {
+    font-size: $body;
+  }
+
+  &.medium-button {
+    font-size: $general;
+  }
+
+  &.large-button {
+    font-size: $header-3;
+  }
+
+  &.primary-button {
+    background-color: $primary-color;
+    color: $neutral;
+    border: 1.5px solid $neutral;
+
+    &:hover {
+      background-color: $secondary-color;
+      box-shadow: 0px 4px 3px 0px $neutral;
+    }
+
+    &.animated-button {
+      animation: colorChangeAnimation 3s infinite;
+    }
+
+    @keyframes colorChangeAnimation {
+      0% {
+        background-color: $primary-color;
+        color: $neutral;
+        border: 1.5px solid $neutral;
+      }
+      50% {
+        background-color: $neutral;
+        color: $primary-color;
+        border: 1.5px solid $primary-color;
+      }
+      100% {
+        background-color: $primary-color;
+        color: $neutral;
+        border: 1.5px solid $neutral;
+      }
+    }
+  }
+
+  &.secondary-button {
+    background-color: $secondary-color;
+    color: $neutral;
+    border: 1.5px solid $neutral;
+
+    &:hover {
+      background-color: $tertiary-color;
+      box-shadow: 0px 4px 3px 0px $neutral;
+    }
+  }
+
+  &.tertiary-button {
+    background-color: $tertiary-color;
+    color: $neutral;
+    border: 1.5px solid $neutral;
+
+    &:hover {
+      background-color: $quarternary-color;
+      box-shadow: 0px 4px 3px 0px $neutral;
+    }
+  }
+
+  &.quarternary-button {
+    background-color: $quarternary-color;
+    color: $neutral;
+    border: 1.5px solid $neutral;
+
+    &:hover {
+      background-color: $quinternary-color;
+      box-shadow: 0px 4px 3px 0px $neutral;
+    }
+  }
+
+  &.quinternary-button {
+    background-color: $quinternary-color;
+    color: $neutral;
+    border: 1.5px solid $neutral;
+
+    &:hover {
+      background-color: lighten($quinternary-color, 10);
+      box-shadow: 0px 4px 3px 0px $neutral;
+    }
+  }
+
+  &.neutral-button {
+    background-color: $neutral;
+    color: $primary-color;
+    border: 1.5px solid $primary-color;
+
+    &:hover {
+      background-color: $neutral;
+      color: $secondary-color;
+      box-shadow: 0px 4px 3px 0px $secondary-color;
+    }
+  }
+
+  &.success-button {
+    background-color: $success;
+    color: $anti-neutral;
+    border: 1.5px solid $anti-neutral;
+
+    &:hover {
+      background-color: lighten($success, 10);
+      box-shadow: 0px 4px 3px 0px $success;
+    }
+  }
+
+  &.error-button {
+    background-color: $error;
+    color: $anti-neutral;
+    border: 1.5px solid $anti-neutral;
+
+    &:hover {
+      background-color: lighten($error, 10);
+      box-shadow: 0px 4px 3px 0px $error;
+    }
+  }
+}

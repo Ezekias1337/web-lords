@@ -1,0 +1,190 @@
+@import "../../../css/variables";
+
+.nav-call-to-action {
+  background-color: $primary-color;
+  color: $light-gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.nav-link {
+  font-size: 18px !important;
+}
+
+.nav-link-underline {
+  height: 2.5px;
+  width: 0%;
+  transition: 0.3s;
+}
+
+.nav-link-wrapper:hover {
+  .nav-link-underline {
+    width: 100%;
+    transition: 0.3s;
+  }
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar-background-image {
+  position: absolute;
+  width: 100%;
+}
+
+/* 
+  Resize the logo depending on screen size
+  ! 768 breakpoint for when nav becomes mobile 
+*/
+
+@media screen and (min-width: 320px) {
+  .navbar-brand img {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand img {
+    width: 100px;
+  }
+
+  .navbar-call-us,
+  .after-hours-column {
+    display: none !important;
+  }
+
+  .language-toggler-col {
+    justify-content: center;
+    padding-top: 10px;
+  }
+
+  a.nav-link {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .phone-info-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-and-number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-brand img {
+    width: 100px;
+  }
+  
+  .language-toggler-col {
+    justify-content: center;
+    padding-top: 10px;
+  }
+  
+  .phone-info-col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-and-number-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .navbar-brand img {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .navbar-brand img {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1085px) {
+  .navbar-brand img {
+    width: 400px;
+  }
+}
+
+/* 
+    Variant-Specific Styling
+*/
+
+.light-variant {
+  background-color: $transparent-black;
+
+  .nav-link {
+    color: $light-gray !important;
+  }
+
+  .nav-link-wrapper:hover {
+    .nav-link {
+      color: $neutral !important;
+    }
+  }
+
+  .nav-link-underline {
+    background-color: $quinternary-color;
+  }
+
+  .navbar-toggler {
+    border: 1px solid $primary-color !important;
+    background-image: url("../../../assets/icons/navbar-hamburger-menu.svg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &:hover {
+      box-shadow: 0 0 0 2px $primary-color;
+    }
+  }
+}
+
+.dark-variant {
+  .nav-link {
+    color: $primary-color !important;
+  }
+
+  .nav-link-wrapper:hover {
+    .nav-link {
+      color: $quarternary-color !important;
+    }
+  }
+
+  .nav-link-underline {
+    background-color: $gray;
+  }
+}
+
+/* 
+  Language Toggler
+*/
+
+nav .nav-call-to-action {
+  .toggler-align {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .form-label {
+    font-size: 18px;
+  }
+
+  svg {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
