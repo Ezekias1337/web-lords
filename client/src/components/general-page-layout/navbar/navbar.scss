@@ -2,9 +2,34 @@
 
 nav.navbar {
   background-color: $primary-200;
-  
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  .navbar-brand {
+    display: inline-block;
+  }
+
   .nav-link {
-    font-size: 18px !important;
+    font-size: 32px;
+  }
+
+  .navbar-menu {
+    width: 100%;
+  }
+
+  .navbar-menu ul {
+    justify-content: end;
+    gap: 30px;
+
+    li {
+      display: block;
+
+      .nav-link {
+        text-decoration: none;
+      }
+    }
   }
 
   .nav-link-underline {
@@ -51,8 +76,56 @@ nav.navbar {
   }
 
   @media screen and (max-width: 768px) {
+    display: block !important;
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+    .navbar-menu {
+      opacity: 0;
+      visibility: hidden;
+      max-height: 0px;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .navbar-menu-open {
+      opacity: 1;
+      visibility: visible;
+      max-height: 800px;
+    }
+
+    .navbar-menu ul {
+      flex-direction: column;
+    }
+
+    a.nav-link {
+      font-size: $general;
+    }
+
+    .navbar-brand {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .navbar-toggle {
+        height: calc(100% - 10px);
+        background-color: $primary-900;
+        color: $primary-500;
+        border: 1px solid $primary-500;
+        box-shadow: 0px 0px 0px 0px transparent;
+        transition: box-shadow 0.3s ease-in-out;
+        padding: 5px 15px;
+        border-radius: $border-radius;
+
+        &:hover,
+        &:focus {
+          box-shadow: 0px 3px 5px 0px $primary-700;
+        }
+      }
+    }
+
     .navbar-brand img {
-      width: 100px;
+      width: 300px;
     }
 
     a.nav-link {
@@ -63,7 +136,7 @@ nav.navbar {
 
   @media screen and (min-width: 768px) {
     .navbar-brand img {
-      width: 100px;
+      width: 150px;
     }
   }
 
@@ -71,11 +144,19 @@ nav.navbar {
     .navbar-brand img {
       width: 150px;
     }
+    
+    a.nav-link {
+      font-size: $general;
+    }
   }
 
   @media screen and (min-width: 950px) {
     .navbar-brand img {
       width: 250px;
+    }
+    
+    a.nav-link {
+      font-size: $general;
     }
   }
 
@@ -85,14 +166,3 @@ nav.navbar {
     }
   }
 }
-
-/* .navbar-toggler {
-    border: 1px solid $primary-color !important;
-    background-image: url("../../../assets/icons/navbar-hamburger-menu.svg");
-    background-repeat: no-repeat;
-    background-position: 50%;
-
-    &:hover {
-      box-shadow: 0 0 0 2px $primary-color;
-    }
-  } */
