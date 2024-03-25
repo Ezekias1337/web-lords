@@ -1,5 +1,5 @@
 // Library Imports
-import { useSelector } from "react-redux";
+//import { useSelector } from "react-redux";
 // Functions, Helpers, Utils and Hooks
 // Components
 import  NavBar  from "../components/general-page-layout/navbar/Navbar";
@@ -15,7 +15,7 @@ const Home = () => {
     <div className="container-fluid home-page p-0">
        <NavBar  />
 
-      {/*<Footer /> */}
+      <Footer />
       
       
     </div>
