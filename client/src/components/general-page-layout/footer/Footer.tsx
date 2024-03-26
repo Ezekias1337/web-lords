@@ -23,17 +23,10 @@ const Footer = () => {
         <div className="social-col">
           <FooterSocialIcon
             icon={faInstagram}
-            url="https://www.instagram.com/theolivelawfirm_1957/"
+            url="https://www.instagram.com/"
           />
-          <FooterSocialIcon
-            icon={faFacebook}
-            url="https://www.facebook.com/TheOliveLawFirm"
-          />
-          <FooterSocialIcon
-            icon={faXTwitter}
-            url="https://twitter.com/OliveLawFirm"
-          />
-          d
+          <FooterSocialIcon icon={faFacebook} url="https://www.facebook.com/" />
+          <FooterSocialIcon icon={faXTwitter} url="https://twitter.com/" />
         </div>
       </div>
       <div className="footer-navigation display-flex justify-content-space-around">
@@ -44,8 +37,8 @@ const Footer = () => {
 
           <div className="footer-link-column display-flex">
             <FooterLink
-              linkText="(704) 377-9222"
-              url="tel:+17043779222"
+              linkText="(864) 666-9727"
+              url="tel:+18646669727"
               openInNewTab={false}
             />
             <FooterLink
@@ -55,7 +48,7 @@ const Footer = () => {
             />
             <FooterLink
               linkText="Directions"
-              url="https://goo.gl/maps/"
+              url="https://maps.app.goo.gl/aTdS2Zs6xNrL2zXRA"
               openInNewTab={true}
             />
           </div>

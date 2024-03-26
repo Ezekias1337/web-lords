@@ -31,16 +31,16 @@
     }
 
     .footer-social-wrapper {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       background-color: transparent;
       border: 1px $primary-500 solid;
     }
 
     .footer-social-wrapper svg {
-      width: 36px;
-      height: 36px;
+      width: 35px;
+      height: 35px;
       color: $primary-500;
     }
 
@@ -81,7 +81,7 @@
   .footer-navigation a {
     color: $primary-500;
     text-decoration: none;
-    font-size: 18px;
+    font-size: $body;
 
     .footer-navigation-underline {
       background-color: $primary-300;
@@ -91,7 +91,7 @@
   .footer-copywrite-disclaimer-wrapper a {
     color: $primary-500;
     text-decoration: none;
-    font-size: 18px;
+    font-size: $body;
 
     .footer-navigation-underline {
       background-color: $primary-300;
@@ -142,8 +142,25 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
+    @media (max-width: 768px) {
+      margin-left: 40px;
+      margin-right: 40px;
+      flex-wrap: wrap;
+
+      .copywrite-container {
+        padding-bottom: 10px;
+      }
+    }
+
     .footer-bottom-navigation-wrapper {
       gap: 20px;
+
+      div
+        a.full-flex
+        div.footer-navigation-link-wrapper
+        span.footer-navigation-link {
+        font-size: $body;
+      }
     }
 
     @media (max-width: 768px) {
@@ -159,7 +176,7 @@
 
   .copywrite-disclaimer {
     color: $primary-500;
-    font-size: 18px;
+    font-size: $body;
   }
 
   .copywrite-link {
