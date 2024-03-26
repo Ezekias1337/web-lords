@@ -2,9 +2,9 @@
 import { FC } from "react";
 import { faCalendar } from "@fortawesome/free-regular-svg-icons";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
+import { InputFieldProps } from "../../constants/formProps";
 // Constants
-import { americanDatePattern } from "../../../../shared/constants/regexPatterns";
+import { americanDatePattern } from "../../../../../../../shared/constants/regexPatterns";
 // Components
 import { TextInput } from "./TextInput";
 

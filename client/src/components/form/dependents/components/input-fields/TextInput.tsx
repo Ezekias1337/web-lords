@@ -6,15 +6,15 @@ import {
   handleFormChange,
   FormUpdateEvent,
 } from "../../functions/forms/handleFormChange";
-import { camelCasifyString } from "../../../../shared/utils/strings/camelCasifyString";
-import { kebabCasifyString } from "../../../../shared/utils/strings/kebabCasifyString";
+import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
+import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Constants
-import { textOnlyPattern } from "../../../../shared/constants/regexPatterns";
+import { textOnlyPattern } from "../../../../../../../shared/constants/regexPatterns";
 // Interfaces and Types
 import {
   InputFieldProps,
   InputFieldPropsState,
-} from "../../constants/interfaces/InputFieldProps";
+} from "../../constants/formProps";
 
 export const TextInput: FC<InputFieldProps> = ({
   name,
@@ -64,7 +64,7 @@ export const TextInput: FC<InputFieldProps> = ({
   */  
     
   useEffect(() => {
-    let newElementProps = {
+    const newElementProps = {
       ...inputElementProps,
     };
 
@@ -77,7 +77,7 @@ export const TextInput: FC<InputFieldProps> = ({
     }
 
     setInputElementProps(newElementProps);
-  }, [additionalClassNames, placeholder, inputType, autoComplete]);
+  }, [additionalClassNames, placeholder, inputType, autoComplete, inputElementProps, theme]);
 
   return (
     <div className={`mt-2 input-wrapper`} key={name}>

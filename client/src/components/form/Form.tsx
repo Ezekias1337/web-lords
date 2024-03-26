@@ -2,17 +2,19 @@
 import { FC, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // Functions, Helpers, and Utils
-import { handleSubmit, renderInputFields } from "./dependents/formFunctions";
+import { handleSubmit } from "./dependents/functions/handleSubmit";
+import { renderInputFields } from "./dependents/functions/renderInputFields";
 import { camelCasifyString } from "../../../../shared/utils/strings/camelCasifyString";
 // Interfaces and Types
-import { FormProps, CustomSubmitArgs } from "./dependents/formTypes";
+import {
+  FormProps /* CustomSubmitArgs */,
+} from "./dependents/constants/formTypes";
 // Components
 import { Button } from "../button/Button";
 // CSS
-import "./dependents/inputFields.scss";
+import "./dependents/form.scss";
 
 export const Form: FC<FormProps> = ({
-  language,
   formTheme,
   inputFields,
   apiEndpoint,
@@ -48,7 +50,7 @@ export const Form: FC<FormProps> = ({
     if (submissionSuccessful && redirectUrl) {
       navigate(redirectUrl);
     }
-  }, [submissionSuccessful]);
+  }, [submissionSuccessful, navigate, redirectUrl]);
 
   return (
     <form
@@ -112,6 +114,7 @@ export const Form: FC<FormProps> = ({
             text={button2Text}
             buttonId={`${formId}-button-2`}
             buttonSize={buttonSize}
+            loading={button2Loading !== undefined ? button2Loading : false}
           />
         ) : (
           <></>

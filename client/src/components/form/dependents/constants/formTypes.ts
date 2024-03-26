@@ -4,10 +4,9 @@ import {
   InputFieldProps,
   DropdownFieldProps,
   CreditCardFieldProps,
-} from "../../../constants/interfaces/InputFieldProps";
-import { SetStateHookForm } from "../../../constants/interfaces/InputFieldProps";
-import { FormState } from "../../../constants/interfaces/InputFieldProps";
-import { FormUpdateEvent } from "../../../functions/forms/handleFormChange";
+  FormState,
+  SetStateHookForm,
+} from "./formProps";
 
 /* 
   ? This is a type guard to help the typescript compiler since
@@ -44,12 +43,12 @@ export interface CreditCardField extends CreditCardFieldProps {
 }
 
 export interface CustomSubmitArgs<
-  T1 = any,
-  T2 = any,
-  T3 = any,
-  T4 = any,
-  T5 = any,
-  T6 = any
+  T1 = unknown,
+  T2 = unknown,
+  T3 = unknown,
+  T4 = unknown,
+  T5 = unknown,
+  T6 = unknown
 > {
   argument1: T1;
   argument2: T2;
@@ -57,6 +56,20 @@ export interface CustomSubmitArgs<
   argument4?: T4;
   argument5?: T5;
   argument6?: T6;
+}
+
+export interface FormUpdateEvent {
+  target: {
+    name: string;
+    value: string;
+  };
+}
+
+export interface SwitchUpdateEvent {
+  target: {
+    name: string;
+    checked: boolean;
+  };
 }
 
 export interface FormProps {

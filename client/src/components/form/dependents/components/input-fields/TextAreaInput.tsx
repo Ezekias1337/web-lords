@@ -5,10 +5,10 @@ import {
   handleFormChange,
   FormUpdateEvent,
 } from "../../functions/forms/handleFormChange";
-import { camelCasifyString } from "../../../../shared/utils/strings/camelCasifyString";
-import { kebabCasifyString } from "../../../../shared/utils/strings/kebabCasifyString";
+import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
+import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
+import { InputFieldProps } from "../../constants/formProps";
 
 /* 
   TODO: Need to change styling of resize handle

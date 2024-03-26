@@ -2,8 +2,8 @@
 import { FC, useState } from "react";
 import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
-import { textAndNumbersAndSpecialCharsNoSpacesPattern } from "../../../../shared/constants/regexPatterns";
+import { InputFieldProps } from "../../constants/formProps";
+import { textAndNumbersAndSpecialCharsNoSpacesPattern } from "../../../../../../../shared/constants/regexPatterns";
 // Constants
 import { currentPasswordAutocomplete } from "../../constants/formAutocompleteStrings";
 // Components

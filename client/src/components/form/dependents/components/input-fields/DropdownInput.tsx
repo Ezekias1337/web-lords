@@ -3,10 +3,10 @@ import { FC, useMemo } from "react";
 // Functions, Helpers, and Utils
 import { handleFormChange } from "../../functions/forms/handleFormChange";
 import { renderSelectOptions } from "../../functions/forms/renderSelectOptions";
-import { camelCasifyString } from "../../../../shared/utils/strings/camelCasifyString";
-import { kebabCasifyString } from "../../../../shared/utils/strings/kebabCasifyString";
+import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
+import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Interfaces and Types
-import { DropdownFieldProps } from "../../constants/interfaces/InputFieldProps";
+import { DropdownFieldProps } from "../../constants/formProps";
 
 export const DropdownInput: FC<DropdownFieldProps> = ({
   name,

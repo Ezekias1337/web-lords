@@ -4,11 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
+import { InputFieldProps } from "../../constants/formProps";
 import {
   phoneNumberPattern,
   numberOnlyPattern,
-} from "../../../../shared/constants/regexPatterns";
+} from "../../../../../../../shared/constants/regexPatterns";
 import { phoneNumberAutocomplete } from "../../constants/formAutocompleteStrings";
 import { FormUpdateEvent } from "../../functions/forms/handleFormChange";
 // Components

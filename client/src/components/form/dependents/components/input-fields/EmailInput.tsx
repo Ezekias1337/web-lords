@@ -2,8 +2,8 @@
 import { FC } from "react";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
-import { emailPattern } from "../../../../shared/constants/regexPatterns";
+import { InputFieldProps } from "../../constants/formProps";
+import { emailPattern } from "../../../../../../../shared/constants/regexPatterns";
 import { emailAutocomplete } from "../../constants/formAutocompleteStrings";
 // Components
 import { TextInput } from "./TextInput";

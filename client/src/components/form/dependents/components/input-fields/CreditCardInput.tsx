@@ -13,8 +13,8 @@ import {
   FormUpdateEvent,
 } from "../../functions/forms/handleFormChange";
 // Interfaces and Types
-import { CreditCardFieldProps } from "../../constants/interfaces/InputFieldProps";
-import { creditCardNumberPattern } from "../../../../shared/constants/regexPatterns";
+import { CreditCardFieldProps } from "../../constants/formProps";
+import { creditCardNumberPattern } from "../../../../../../../shared/constants/regexPatterns";
 import { creditCardNumberAutocomplete } from "../../constants/formAutocompleteStrings";
 // Components
 import { TextInput } from "./TextInput";

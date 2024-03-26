@@ -10,8 +10,8 @@ import { phoneNumberCountryCodes } from "../../constants/phoneNumberCountryCodes
 import {
   CountryCodeInputFieldProps,
   CountryCodeFilterProps,
-} from "../../constants/interfaces/InputFieldProps";
-import { FormState } from "../../constants/interfaces/InputFieldProps";
+} from "../../constants/formProps";
+import { FormState } from "../../constants/formProps";
 // Components
 import { SearchInput } from "./SearchInput";
 

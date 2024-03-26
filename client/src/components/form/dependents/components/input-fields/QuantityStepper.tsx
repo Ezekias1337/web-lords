@@ -2,7 +2,7 @@
 import { FC } from "react";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
+import { InputFieldProps } from "../../constants/formProps";
 // Components
 import { TextInput } from "./TextInput";
 

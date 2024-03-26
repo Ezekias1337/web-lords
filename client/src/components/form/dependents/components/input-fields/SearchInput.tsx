@@ -2,8 +2,8 @@
 import { FC } from "react";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 // Interfaces and Types
-import { InputFieldProps } from "../../constants/interfaces/InputFieldProps";
-import { textAndNumbersPattern } from "../../../../shared/constants/regexPatterns";
+import { InputFieldProps } from "../../constants/formProps";
+import { textAndNumbersPattern } from "../../../../../../../shared/constants/regexPatterns";
 // Components
 import { TextInput } from "./TextInput";
 
