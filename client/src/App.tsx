@@ -2,6 +2,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // User Pages
 import Home from "./pages/Home";
+import ContactUs from "./pages/ContactUs";
 // Admin Pages
 //404 Page
 import PageNotFound from "./pages/PageNotFound";
@@ -17,8 +18,8 @@ const App = () => {
       <Routes>
         {/* Client Facing */}
         <Route path="/" element={<Home />}></Route>
-        {/* <Route path="/contact-us" element={<ContactUs />}></Route>
-        <Route path="/case-submitted" element={<CaseSubmitted />}></Route>
+        <Route path="/contact-us" element={<ContactUs />}></Route>
+        {/* <Route path="/case-submitted" element={<CaseSubmitted />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>
         <Route
           path="/attorney-profile/:lawyer"

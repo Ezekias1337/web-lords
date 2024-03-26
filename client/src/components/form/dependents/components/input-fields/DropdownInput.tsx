@@ -1,8 +1,8 @@
 // Library Imports
 import { FC, useMemo } from "react";
 // Functions, Helpers, and Utils
-import { handleFormChange } from "../../functions/forms/handleFormChange";
-import { renderSelectOptions } from "../../functions/forms/renderSelectOptions";
+import { handleFormChange } from "../../functions/handleFormChange";
+import { renderSelectOptions } from "../../functions/renderSelectOptions";
 import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
 import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Interfaces and Types

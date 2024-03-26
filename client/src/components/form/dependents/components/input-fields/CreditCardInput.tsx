@@ -1,5 +1,5 @@
 // Library Imports
-import { FC, useEffect, useState, ChangeEvent } from "react";
+import { FC, useEffect, useState } from "react";
 import {
   faCcAmex,
   faCcVisa,
@@ -8,14 +8,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 // Functions, Helpers and Utils
-import {
-  handleFormChange,
-  FormUpdateEvent,
-} from "../../functions/forms/handleFormChange";
-// Interfaces and Types
-import { CreditCardFieldProps } from "../../constants/formProps";
+import { handleFormChange } from "../../functions/handleFormChange";
+// Constants
 import { creditCardNumberPattern } from "../../../../../../../shared/constants/regexPatterns";
 import { creditCardNumberAutocomplete } from "../../constants/formAutocompleteStrings";
+// Interfaces and Types
+import { FormUpdateEvent } from "../../constants/formTypes";
+import { CreditCardFieldProps } from "../../constants/formProps";
+
 // Components
 import { TextInput } from "./TextInput";
 
@@ -32,7 +32,7 @@ export const CreditCardInput: FC<CreditCardFieldProps> = ({
   setStateHook,
   setErrorHook,
 }) => {
-    /* 
+  /* 
       TODO: Listen for autocomplete or copy paste for formatting
     */
 

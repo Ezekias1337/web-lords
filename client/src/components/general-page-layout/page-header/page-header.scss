@@ -1,12 +1,12 @@
 @import "../../../css/variables";
 
 .page-title {
-  color: $primary-color;
+  color: $primary-500;
   padding-top: 80px;
   
   &.banner-title {
-    background-color: $primary-color;
-    color: $neutral;
+    background-color: $primary-500;
+    color: $neutral-500;
   }
 }
 

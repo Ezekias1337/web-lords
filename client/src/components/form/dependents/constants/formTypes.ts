@@ -73,7 +73,6 @@ export interface SwitchUpdateEvent {
 }
 
 export interface FormProps {
-  language: string;
   formTheme: "dark" | "light";
   inputFields: Field[];
   apiEndpoint: string;

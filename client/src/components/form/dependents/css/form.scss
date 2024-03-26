@@ -1,6 +1,4 @@
-@import "../../../css/variables";
-@import "../../../css/partials/switch-input";
-@import "../../../css/partials/input-themes";
+@import "../../../../css/variables";
 
 /* 
   ! Need to take a look at responsiveness of the
@@ -10,6 +8,11 @@
 /* 
   Base Styling
 */
+
+.input-field {
+  border-radius: $border-radius;
+}
+
 
 .icon-input-left {
   position: absolute;
@@ -28,11 +31,11 @@
 }
 
 .light-icon {
-  color: $primary-color;
+  color: $primary-500;
 }
 
 .dark-icon {
-  color: $neutral;
+  color: $primary-100;
 }
 
 .input-wrapper {
@@ -63,7 +66,7 @@
 }
 
 .form-error-message {
-  color: $error;
+  color: $error-500;
   font-weight: bold;
 }
 
@@ -275,11 +278,11 @@ div.country-code-input-wrapper {
 }
 
 .country-arrow-light {
-  color: $primary-color;
+  color: $primary-500;
 }
 
 .country-arrow-dark {
-  color: $neutral;
+  color: $primary-100;
 }
 
 .flag-separator {
@@ -292,11 +295,11 @@ div.country-code-input-wrapper {
 }
 
 .light-separator {
-  background-color: $primary-color;
+  background-color: $primary-500;
 }
 
 .dark-separator {
-  background-color: $neutral;
+  background-color: $primary-100;
 }
 
 .country-code-input-wrapper {
@@ -321,27 +324,25 @@ div.country-code-input-wrapper {
   align-items: center;
 }
 
-.light-country-code-input {
-  .country-code-menu-wrapper {
-    background-color: $light-gray;
-    border: 1.5px solid $primary-color;
-  }
-  .country-code-label {
-    color: $primary-color;
-  }
-  .country-code-option {
-    border-color: $primary-color;
-  }
-  .country-code-option:hover {
-    background-color: $quarternary-color;
+.country-code-menu-wrapper {
+  background-color: $primary-100;
+  border: 1.5px solid $primary-500;
+}
+.country-code-label {
+  color: $primary-500;
+}
+.country-code-option {
+  border-color: $primary-500;
+}
+.country-code-option:hover {
+  background-color: $primary-300;
 
-    .country-code-label {
-      color: $neutral;
-    }
+  .country-code-label {
+    color: $neutral-500;
   }
 }
 
-.dark-country-code-input {
+/* .dark-country-code-input {
   .country-code-menu-wrapper {
     background-color: $primary-color;
     border: 1.5px solid $neutral;
@@ -358,7 +359,7 @@ div.country-code-input-wrapper {
       color: $primary-color;
     }
   }
-}
+} */
 
 .form-button-container {
   button:nth-of-type(2) {

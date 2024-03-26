@@ -1,9 +1,8 @@
 // Library Imports
-import { FC, useState, useEffect, useMemo, ReactNode } from "react";
-import { nanoid } from "nanoid";
+import { FC, useState, useEffect, useMemo } from "react";
 // Functions, Helpers, and Utils
-import { renderCountryCodeOptions } from "../../functions/forms/renderCountryCodeOptions";
-import { updateCountryCodeImage } from "../../functions/forms/updateCountryCodeImage";
+import { renderCountryCodeOptions } from "../../functions/renderCountryCodeOptions";
+import { updateCountryCodeImage } from "../../functions/updateCountryCodeImage";
 // Constants
 import { phoneNumberCountryCodes } from "../../constants/phoneNumberCountryCodes";
 // Interfaces and Types
@@ -40,7 +39,7 @@ export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
         setShowMenu,
         setCountryImage
       ),
-    [filteredOptions]
+    [filteredOptions, setCountryCode, setCountryImage, setShowMenu]
   );
 
   /* 
@@ -95,7 +94,6 @@ export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
         className="toggle-country-code-menu"
         style={{ backgroundImage: `url(${countryImage})` }}
         id="toggle-country-code-menu"
-        key={nanoid()}
         onClick={() => setShowMenu(!showMenu)}
       ></button>
       {showMenu === false ? (

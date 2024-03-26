@@ -12,7 +12,7 @@ import {
 // Components
 import { Button } from "../button/Button";
 // CSS
-import "./dependents/form.scss";
+import "./dependents/css/form.scss";
 
 export const Form: FC<FormProps> = ({
   formTheme,

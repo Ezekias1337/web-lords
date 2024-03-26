@@ -2,15 +2,13 @@
 import { FC, useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Functions, Helpers, Utils and Hooks
-import {
-  handleFormChange,
-  FormUpdateEvent,
-} from "../../functions/forms/handleFormChange";
+import { handleFormChange } from "../../functions/handleFormChange";
 import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
 import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Constants
 import { textOnlyPattern } from "../../../../../../../shared/constants/regexPatterns";
 // Interfaces and Types
+import { FormUpdateEvent } from "../../constants/formTypes";
 import {
   InputFieldProps,
   InputFieldPropsState,
@@ -61,8 +59,8 @@ export const TextInput: FC<InputFieldProps> = ({
     ? PasswordInput and updates based off errors, it was required to make
     ? These attributes cause re-renders of the component, this is all handled
     ? in the useEffect
-  */  
-    
+  */
+
   useEffect(() => {
     const newElementProps = {
       ...inputElementProps,
@@ -77,7 +75,13 @@ export const TextInput: FC<InputFieldProps> = ({
     }
 
     setInputElementProps(newElementProps);
-  }, [additionalClassNames, placeholder, inputType, autoComplete, inputElementProps, theme]);
+  }, [
+    additionalClassNames,
+    placeholder,
+    inputType,
+    autoComplete,
+    theme,
+  ]);
 
   return (
     <div className={`mt-2 input-wrapper`} key={name}>

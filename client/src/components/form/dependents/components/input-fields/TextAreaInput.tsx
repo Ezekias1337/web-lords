@@ -1,14 +1,12 @@
 // Library Imports
 import { FC } from "react";
 // Functions, Helpers, and Utils
-import {
-  handleFormChange,
-  FormUpdateEvent,
-} from "../../functions/forms/handleFormChange";
+import { handleFormChange } from "../../functions/handleFormChange";
 import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
 import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Interfaces and Types
 import { InputFieldProps } from "../../constants/formProps";
+import { FormUpdateEvent } from "../../constants/formTypes";
 
 /* 
   TODO: Need to change styling of resize handle

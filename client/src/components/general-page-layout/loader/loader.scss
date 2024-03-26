@@ -57,56 +57,42 @@
 
 .loader-primary {
   &#loaderElement div {
-    border: 5px solid $primary-color;
-    border-color: $primary-color transparent transparent transparent;
-  }
-}
-
-.loader-secondary {
-  &#loaderElement div {
-    border: 5px solid $secondary-color;
-    border-color: $secondary-color transparent transparent transparent;
-  }
-}
-
-.loader-tertiary {
-  &#loaderElement div {
-    border: 5px solid $tertiary-color;
-    border-color: $tertiary-color transparent transparent transparent;
-  }
-}
-
-.loader-quarternary {
-  &#loaderElement div {
-    border: 5px solid $quarternary-color;
-    border-color: $quarternary-color transparent transparent transparent;
-  }
-}
-
-.loader-quinternary {
-  &#loaderElement div {
-    border: 5px solid $quinternary-color;
-    border-color: $quinternary-color transparent transparent transparent;
-  }
-}
-
-.loader-neutral {
-  &#loaderElement div {
-    border: 5px solid $neutral;
-    border-color: $neutral transparent transparent transparent;
+    border: 5px solid $primary-500;
+    border-color: $primary-500 transparent transparent transparent;
   }
 }
 
 .loader-success {
   &#loaderElement div {
-    border: 5px solid $success;
-    border-color: $success transparent transparent transparent;
+    border: 5px solid $success-500;
+    border-color: $success-500 transparent transparent transparent;
+  }
+}
+
+.loader-warning {
+  &#loaderElement div {
+    border: 5px solid $warning-500;
+    border-color: $warning-500 transparent transparent transparent;
   }
 }
 
 .loader-error {
   &#loaderElement div {
-    border: 5px solid $error;
-    border-color: $error transparent transparent transparent;
+    border: 5px solid $error-500;
+    border-color: $error-500 transparent transparent transparent;
+  }
+}
+
+.loader-info {
+  &#loaderElement div {
+    border: 5px solid $info-500;
+    border-color: $info-500 transparent transparent transparent;
+  }
+}
+
+.loader-neutral {
+  &#loaderElement div {
+    border: 5px solid $neutral-500;
+    border-color: $neutral-500 transparent transparent transparent;
   }
 }
