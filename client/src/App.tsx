@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // User Pages
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
+import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 // Admin Pages
@@ -21,13 +22,10 @@ const App = () => {
         {/* Client Facing */}
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
-        {/* <Route path="/case-submitted" element={<CaseSubmitted />}></Route>
+        {/* <Route path="/case-submitted" element={<CaseSubmitted />}></Route> */}
         <Route path="/about-us" element={<AboutUs />}></Route>
-        <Route
-          path="/attorney-profile/:lawyer"
-          element={<AttorneyProfile />}
-        ></Route>
-        <Route path="/practice-areas" element={<PracticeAreas />}></Route>
+
+        {/*<Route path="/practice-areas" element={<PracticeAreas />}></Route>
         <Route path="/client-reviews" element={<ClientReviews />}></Route>
         <Route path="/faqs" element={<FAQ />}></Route>
         <Route

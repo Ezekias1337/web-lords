@@ -30,15 +30,13 @@ const Navbar: React.FC = () => {
           </button>
         )}
       </div>
-      <div
-        className={`navbar-menu${isOpen ? " navbar-menu-open" : ""}`}
-      >
+      <div className={`navbar-menu${isOpen ? " navbar-menu-open" : ""}`}>
         <ul className="space-around-flex align-items-center">
           <li>
             <AnimatedNavLink linkText="Home" url="/" />
           </li>
           <li>
-            <AnimatedNavLink linkText="About" url="/about" />
+            <AnimatedNavLink linkText="About" url="/about-us" />
           </li>
           <li>
             <AnimatedNavLink linkText="Contact Us" url="/contact-us" />
@@ -48,6 +46,5 @@ const Navbar: React.FC = () => {
     </nav>
   );
 };
-
 
 export default Navbar;
