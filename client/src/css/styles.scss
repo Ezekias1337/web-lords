@@ -116,6 +116,10 @@ body {
   padding-right: 11.5%;
 }
 
+.button-wrapper {
+  @extend .full-flex;
+}
+
 .bold-text {
   font-weight: bold;
 }
@@ -152,7 +156,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: 0 !important;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .page-title {

@@ -226,7 +226,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="container-fluid contact-us-container home-page p-0">
+    <div className="contact-us-container">
       <NavBar />
       <PageHeader title="Contact Us" />
 

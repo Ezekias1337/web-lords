@@ -12,7 +12,7 @@ import "../css/page-specific/home.scss";
 
 const Home = () => {
   return (
-    <div className="container-fluid home-page p-0">
+    <div className="home-page">
       <NavBar />
 
       <Footer />
