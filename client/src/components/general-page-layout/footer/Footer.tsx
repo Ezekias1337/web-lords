@@ -11,13 +11,16 @@ import { FooterLink } from "./dependents/FooterLink";
 import "./footer.scss";
 // Assets and Images
 import logo from "../../../assets/images/logo/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo-and-social-row display-flex align-items-center">
         <div className="footer-logo-col">
-          <img src={logo} alt="Logo" />
+          <Link to="/">
+            <img src={logo} alt="Logo" />
+          </Link>
         </div>
 
         <div className="social-col">

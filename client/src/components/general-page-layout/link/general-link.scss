@@ -2,17 +2,8 @@
 
 .general-link {
   font-size: $general;
-  &.dark-link {
-    color: $primary-color;
-    &:hover {
-      color: $tertiary-color;
-    }
-  }
-
-  &.light-link {
-    color: $neutral;
-    &:hover {
-      color: $light-gray;
-    }
+  color: $primary-500;
+  &:hover {
+    color: $primary-300;
   }
 }

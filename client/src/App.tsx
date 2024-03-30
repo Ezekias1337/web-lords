@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // User Pages
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 // Admin Pages
 //404 Page
 import PageNotFound from "./pages/PageNotFound";
@@ -32,9 +33,9 @@ const App = () => {
           path="/community-involvement"
           element={<CommunityInteraction />}
         ></Route>
-        <Route path="/our-results" element={<OurResults />}></Route>
+        <Route path="/our-results" element={<OurResults />}></Route> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route path="/terms-of-service" element={<TermsOfUse />}></Route> */}
+        {/* <Route path="/terms-of-service" element={<TermsOfUse />}></Route> */}
         {/* Admin Only */}
         {/* <Route path="/login" element={<Login />}></Route>
         <Route path="/admin-home" element={<AdminHome />}></Route>
