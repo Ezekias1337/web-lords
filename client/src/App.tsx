@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 // Admin Pages
 //404 Page
 import PageNotFound from "./pages/PageNotFound";
@@ -35,7 +36,7 @@ const App = () => {
         ></Route>
         <Route path="/our-results" element={<OurResults />}></Route> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        {/* <Route path="/terms-of-service" element={<TermsOfUse />}></Route> */}
+        <Route path="/terms-of-service" element={<TermsOfService />}></Route>
         {/* Admin Only */}
         {/* <Route path="/login" element={<Login />}></Route>
         <Route path="/admin-home" element={<AdminHome />}></Route>
