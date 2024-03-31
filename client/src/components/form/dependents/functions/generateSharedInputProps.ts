@@ -10,7 +10,6 @@ import { FormState, SetStateHookForm } from "../constants/formProps";
 const generateSharedInputProps = (
   inputField: Field,
   formErrors: FormState,
-  formTheme: "dark" | "light",
   setStateHook: SetStateHookForm,
   setErrorHook: SetStateHookForm
 ): InputField => {
@@ -21,7 +20,6 @@ const generateSharedInputProps = (
       formErrors[inputField.name] ? "form-error" : ""
     }`,
     placeholder: `${inputField.placeholder}`,
-    theme: formTheme,
     columns: inputField.columns,
     defaultValue: `${
       inputField.defaultValue !== undefined ? inputField.defaultValue : ""

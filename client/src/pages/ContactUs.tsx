@@ -42,7 +42,6 @@ const ContactUs = () => {
     useState<boolean>(false);
   const [submissionInProgress, setSubmissionInProgress] =
     useState<boolean>(false);
-  const [inputFieldColumns, setInputFieldColumns] = useState("6");
   const navigate = useNavigate();
   const [arrayOfInputFields, setArrayOfInputFields] = useState<Field[]>();
 
@@ -65,8 +64,7 @@ const ContactUs = () => {
         label: "Name",
         additionalClassNames: "",
         placeholder: "Name",
-        theme: "light",
-        columns: inputFieldColumns,
+        columns: "6",
         type: "text",
         inputType: "text",
         inputMode: "text",
@@ -83,8 +81,7 @@ const ContactUs = () => {
         label: "Phone Number",
         additionalClassNames: "",
         placeholder: "Phone Number",
-        theme: "light",
-        columns: inputFieldColumns,
+        columns: "6",
         type: "phoneNumber",
         inputType: "tel",
         inputMode: "tel",
@@ -101,8 +98,7 @@ const ContactUs = () => {
         label: "Email Address",
         additionalClassNames: "",
         placeholder: "Email Address",
-        theme: "light",
-        columns: inputFieldColumns,
+        columns: "6",
         type: "email",
         inputType: "email",
         inputMode: "email",
@@ -120,8 +116,7 @@ const ContactUs = () => {
         additionalClassNames: "",
         defaultValue: "Have Logo",
         placeholder: "Business Logo",
-        theme: "light",
-        columns: inputFieldColumns,
+        columns: "6",
         type: "dropdown",
         inputType: "text",
         inputMode: "text",
@@ -136,7 +131,6 @@ const ContactUs = () => {
         label: "Website Description",
         additionalClassNames: "",
         placeholder: "Website Description",
-        theme: "light",
         columns: "12",
         type: "textArea",
         inputType: "text",
@@ -158,7 +152,7 @@ const ContactUs = () => {
     tempInputFields[3] = haveLogoField;
 
     setArrayOfInputFields(tempInputFields);
-  }, [formInputData, inputFieldColumns]);
+  }, [formInputData]);
 
   const customSubmitArgsSubmitCase = {
     argument1: arrayOfInputFields,
@@ -232,7 +226,6 @@ const ContactUs = () => {
 
       {arrayOfInputFields ? (
         <Form
-          formTheme="light"
           inputFields={arrayOfInputFields}
           apiEndpoint="/api/cases/create-case"
           formId="contact-us-form"

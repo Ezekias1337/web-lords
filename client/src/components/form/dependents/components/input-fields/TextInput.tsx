@@ -17,7 +17,6 @@ import {
 export const TextInput: FC<InputFieldProps> = ({
   name,
   label,
-  columns,
   additionalClassNames = "",
   placeholder,
   defaultValue = "",
@@ -42,7 +41,7 @@ export const TextInput: FC<InputFieldProps> = ({
 
   const [inputElementProps, setInputElementProps] =
     useState<InputFieldPropsState>({
-      className: `input-field ${columns}-column-field ${additionalClassNames}`,
+      className: `input-field ${additionalClassNames}`,
       name: camelCasifyString(name),
       id: kebabCasifyString(name),
       placeholder: placeholder,
@@ -75,19 +74,11 @@ export const TextInput: FC<InputFieldProps> = ({
     }
 
     setInputElementProps(newElementProps);
-  }, [
-    additionalClassNames,
-    placeholder,
-    inputType,
-    autoComplete,
-  ]);
+  }, [additionalClassNames, placeholder, inputType, autoComplete]);
 
   return (
     <div className={`input-wrapper`} key={name}>
-      <label
-        htmlFor={kebabCasifyString(name)}
-        className={`form-label`}
-      >
+      <label htmlFor={kebabCasifyString(name)} className={`form-label`}>
         {label}
       </label>
       <input {...inputElementProps} />

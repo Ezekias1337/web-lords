@@ -23,7 +23,6 @@ import { FormError } from "../components/FormError";
 export const renderInputFields = (
   inputFields: Field[],
   formErrors: FormState,
-  formTheme: "dark" | "light",
   setStateHook: SetStateHookForm,
   setErrorHook: SetStateHookForm
 ): ReactNode[] => {
@@ -35,7 +34,6 @@ export const renderInputFields = (
     const generalInputProps = generateSharedInputProps(
       inputField,
       formErrors,
-      formTheme,
       setStateHook,
       setErrorHook
     );
@@ -43,7 +41,10 @@ export const renderInputFields = (
     switch (inputField.type) {
       case "creditCard":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <CreditCardInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -51,7 +52,10 @@ export const renderInputFields = (
         break;
       case "date":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <DateInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -61,7 +65,10 @@ export const renderInputFields = (
       case "dropdown":
         if (isDropdownField(inputField)) {
           inputFieldToBePushed = (
-            <div key={inputField.name} className={`col col-12 col-md-6`}>
+            <div
+              key={inputField.name}
+              className={`column-${inputField.columns}-field`}
+            >
               <DropdownInput
                 {...generalInputProps}
                 dropdownOptions={inputField.dropdownOptions}
@@ -74,7 +81,10 @@ export const renderInputFields = (
         break;
       case "email":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <EmailInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -82,7 +92,10 @@ export const renderInputFields = (
         break;
       case "password":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <PasswordInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -90,7 +103,10 @@ export const renderInputFields = (
         break;
       case "phoneNumber":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <PhoneNumberInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -103,7 +119,10 @@ export const renderInputFields = (
 
       case "text":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div
+            key={inputField.name}
+            className={`column-${inputField.columns}-field`}
+          >
             <TextInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>
@@ -111,7 +130,7 @@ export const renderInputFields = (
         break;
       case "textArea":
         inputFieldToBePushed = (
-          <div key={inputField.name}>
+          <div key={inputField.name} className="text-area-wrapper">
             <TextAreaInput {...generalInputProps} />
             <FormError formErrors={formErrors} inputField={inputField} />
           </div>

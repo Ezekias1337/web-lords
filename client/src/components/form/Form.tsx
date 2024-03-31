@@ -15,7 +15,6 @@ import { Button } from "../button/Button";
 import "./dependents/css/form.scss";
 
 export const Form: FC<FormProps> = ({
-  formTheme,
   inputFields,
   apiEndpoint,
   formId,
@@ -77,17 +76,9 @@ export const Form: FC<FormProps> = ({
         }
       }}
       id={formId}
-      className="padding-left-and-right container form"
+      className="padding-left-and-right form"
     >
-      <div className="row">
-        {renderInputFields(
-          inputFields,
-          formErrors,
-          formTheme,
-          setStateHook,
-          setErrorHook
-        )}
-      </div>
+      {renderInputFields(inputFields, formErrors, setStateHook, setErrorHook)}
       <div
         className={`form-button-container ${
           formBackgroundIsImage === true ? "position-relative" : ""

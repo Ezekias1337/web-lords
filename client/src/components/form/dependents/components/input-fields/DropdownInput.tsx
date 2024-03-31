@@ -15,7 +15,6 @@ export const DropdownInput: FC<DropdownFieldProps> = ({
   name,
   label,
   additionalClassNames = "",
-  columns = "6",
   defaultValue = "",
   dropdownOptions,
   required,
@@ -46,7 +45,7 @@ export const DropdownInput: FC<DropdownFieldProps> = ({
         {label}
       </label>
       <select
-        className={`input-field ${columns}-column-field ${additionalClassNames}`}
+        className={`input-field ${additionalClassNames}`}
         name={camelCasifyString(name)}
         aria-label={camelCasifyString(name)}
         id={kebabCasifyString(name)}
