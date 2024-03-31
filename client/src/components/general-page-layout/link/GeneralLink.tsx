@@ -7,22 +7,20 @@ import "./general-link.scss";
 type LinkProps = {
   text: string;
   url: To;
-  theme: "dark" | "light";
-  openInNewTab: Boolean;
+  openInNewTab: boolean;
   additionalClassNames?: string;
 };
 
 export const GeneralLink: FC<LinkProps> = ({
   text,
   url,
-  theme,
   openInNewTab,
   additionalClassNames,
 }) => {
   return (
     <Link
       to={url}
-      className={`general-link ${theme}-link ${
+      className={`general-link ${
         additionalClassNames !== undefined ? additionalClassNames : ""
       }`}
       target={openInNewTab ? "_blank" : ""}
