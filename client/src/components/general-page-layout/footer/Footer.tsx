@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="logo-and-social-row display-flex align-items-center">
         <div className="footer-logo-col">
           <Link to="/">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" className="footer-logo"/>
           </Link>
         </div>
 

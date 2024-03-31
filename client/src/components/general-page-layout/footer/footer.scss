@@ -18,10 +18,10 @@
 
     .footer-logo-col {
       padding-right: 40px;
-    }
 
-    .footer-logo {
-      width: 100%;
+      .footer-logo {
+        width: 120px;
+      }
     }
 
     .social-col {
@@ -45,11 +45,11 @@
     }
 
     .footer-social-wrapper:hover {
-      border: 1px $primary-300 solid;
-      box-shadow: 0px 4px 3px $neutral-300;
+      border: 1px $primary-400 solid;
+      box-shadow: 0px 4px 3px $primary-400;
 
       svg {
-        color: $primary-300;
+        color: $primary-400;
       }
     }
   }
@@ -115,7 +115,7 @@
   }
 
   .footer-navigation-header {
-    color: $primary-800;
+    color: $primary-300;
     font-size: 31.98px;
     margin-top: 0px;
     padding-top: 40px;

@@ -1,7 +1,7 @@
 @import "../../../css/variables";
 
 nav.navbar {
-  background-color: $primary-200;
+  background-color: $neutral-900;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 40px;
@@ -9,6 +9,9 @@ nav.navbar {
 
   .navbar-brand {
     display: inline-block;
+    .navbar-logo {
+      width: 200px;
+    }
   }
 
   .nav-link {
@@ -51,29 +54,23 @@ nav.navbar {
   }
 
   .nav-link {
-    color: $primary-900 !important;
+    color: $primary-600;
   }
 
   .nav-link-wrapper:hover {
     .nav-link {
-      color: $primary-700 !important;
+      color: $primary-400 !important;
     }
   }
 
   .nav-link-underline {
-    background-color: $primary-900;
+    background-color: $primary-400;
   }
 
   /* 
   Resize the logo depending on screen size
   ! 768 breakpoint for when nav becomes mobile 
 */
-
-  @media screen and (min-width: 320px) {
-    .navbar-brand img {
-      width: 75px;
-    }
-  }
 
   @media screen and (max-width: 768px) {
     display: block !important;
@@ -124,45 +121,21 @@ nav.navbar {
       }
     }
 
-    .navbar-brand img {
-      width: 200px;
-    }
-
     a.nav-link {
       display: flex;
       justify-content: center;
     }
   }
 
-  @media screen and (min-width: 768px) {
-    .navbar-brand img {
-      width: 150px;
-    }
-  }
-
   @media screen and (min-width: 840px) {
-    .navbar-brand img {
-      width: 150px;
-    }
-    
     a.nav-link {
       font-size: $general;
     }
   }
 
   @media screen and (min-width: 950px) {
-    .navbar-brand img {
-      width: 250px;
-    }
-    
     a.nav-link {
       font-size: $general;
-    }
-  }
-
-  @media screen and (min-width: 1085px) {
-    .navbar-brand img {
-      width: 400px;
     }
   }
 }

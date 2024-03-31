@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
     <nav className="navbar display-flex align-items-center">
       <div className="navbar-brand">
         <Link to="/">
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo" className="navbar-logo" />
         </Link>
         {windowWidth <= 768 && (
           <button className="navbar-toggle" onClick={toggleMenu}>
