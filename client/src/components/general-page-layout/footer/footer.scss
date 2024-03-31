@@ -60,6 +60,8 @@
     width: auto;
     margin-left: 120px;
     margin-right: 120px;
+    border-radius: $border-radius;
+    border: 1px solid $primary-500;
 
     @media screen and (max-width: 768px) {
       margin-left: 40px;
