@@ -33,7 +33,7 @@ import { PageHeader } from "../components/general-page-layout/page-header/PageHe
 import { Loader } from "../components/general-page-layout/loader/Loader";
 import { Form } from "../components/form/Form";
 // CSS
-//import "../css/page-specific/contact-us.scss";
+import "../css/page-specific/contact-us.scss";
 
 const ContactUs = () => {
   const [formInputData, setFormInputData] = useState<FormState>({});
@@ -226,7 +226,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="contact-us-container">
+    <div className="contact-us">
       <NavBar />
       <PageHeader title="Contact Us" />
 
