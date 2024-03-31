@@ -17,9 +17,9 @@ import {
 export const TextInput: FC<InputFieldProps> = ({
   name,
   label,
+  columns,
   additionalClassNames = "",
   placeholder,
-  theme,
   defaultValue = "",
   inputType = "text",
   inputMode = "text",
@@ -42,7 +42,7 @@ export const TextInput: FC<InputFieldProps> = ({
 
   const [inputElementProps, setInputElementProps] =
     useState<InputFieldPropsState>({
-      className: `input-field ${theme}-input ${additionalClassNames}`,
+      className: `input-field ${columns}-column-field ${additionalClassNames}`,
       name: camelCasifyString(name),
       id: kebabCasifyString(name),
       placeholder: placeholder,
@@ -66,7 +66,7 @@ export const TextInput: FC<InputFieldProps> = ({
       ...inputElementProps,
     };
 
-    newElementProps.className = `input-field ${theme}-input ${additionalClassNames}`;
+    newElementProps.className = `input-field ${additionalClassNames}`;
     newElementProps.placeholder = placeholder;
     newElementProps.type = inputType;
 
@@ -80,14 +80,13 @@ export const TextInput: FC<InputFieldProps> = ({
     placeholder,
     inputType,
     autoComplete,
-    theme,
   ]);
 
   return (
-    <div className={`mt-2 input-wrapper`} key={name}>
+    <div className={`input-wrapper`} key={name}>
       <label
         htmlFor={kebabCasifyString(name)}
-        className={`form-label ${theme}-label`}
+        className={`form-label`}
       >
         {label}
       </label>
@@ -96,7 +95,7 @@ export const TextInput: FC<InputFieldProps> = ({
         <FontAwesomeIcon
           icon={icon}
           size="xl"
-          className={`icon-input-right ${theme}-icon z-index-0`}
+          className={`icon-input icon-input-right z-index-0`}
         />
       ) : (
         <></>

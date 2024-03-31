@@ -13,7 +13,6 @@ export const EmailInput: FC<InputFieldProps> = ({
   label,
   additionalClassNames,
   placeholder = "user@gmail.com",
-  theme,
   columns = "6",
   defaultValue = "",
   required,
@@ -26,7 +25,6 @@ export const EmailInput: FC<InputFieldProps> = ({
       label={label}
       additionalClassNames={`date-input ${additionalClassNames}`}
       placeholder={placeholder}
-      theme={theme}
       columns={columns}
       defaultValue={defaultValue}
       required={required}

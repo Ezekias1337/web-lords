@@ -22,7 +22,6 @@ export const PasswordInput: FC<InputFieldProps> = ({
   label,
   additionalClassNames,
   placeholder = "Password",
-  theme,
   columns = "6",
   defaultValue = "",
   autoComplete = currentPasswordAutocomplete,
@@ -46,7 +45,6 @@ export const PasswordInput: FC<InputFieldProps> = ({
             : "password-input-revealed"
         } ${additionalClassNames}`}
         placeholder={placeholder}
-        theme={theme}
         columns={columns}
         defaultValue={defaultValue}
         required={true}

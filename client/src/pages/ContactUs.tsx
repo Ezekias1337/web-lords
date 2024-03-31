@@ -152,7 +152,7 @@ const ContactUs = () => {
 
     const haveLogoField = {
       ...tempInputFields[3],
-      dropdownOptions: ["Have Logo", "Need Logol"],
+      dropdownOptions: ["Have Logo", "Need Logo"],
     };
 
     tempInputFields[3] = haveLogoField;

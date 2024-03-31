@@ -6,7 +6,7 @@ import {
   FormUpdateEvent,
   SwitchUpdateEvent,
   handleSwitchChange,
-} from "../../functions/forms/handleFormChange";
+} from "../../../functions/forms/handleFormChange";
 import { camelCasifyString } from "../../../../../../../shared/utils/strings/camelCasifyString";
 import { kebabCasifyString } from "../../../../../../../shared/utils/strings/kebabCasifyString";
 // Interfaces and Types
@@ -15,7 +15,6 @@ import { InputFieldProps } from "../../constants/formProps";
 export const SwitchInput: FC<InputFieldProps> = ({
   name,
   additionalClassNames = "",
-  theme,
   columns = "6",
   setStateHook,
   setErrorHook
@@ -29,16 +28,16 @@ export const SwitchInput: FC<InputFieldProps> = ({
 
   return (
     <div
-      className={`mt-2 input-wrapper form-check form-switch`}
+      className={`form-check form-switch`}
     >
       <label
         htmlFor={camelCasifyString(name)}
-        className={`form-label ${theme}-label`}
+        className={`form-label`}
       >
         {name}
       </label>
       <input
-        className={`${theme}-input form-check-input ${additionalClassNames}`}
+        className={`form-check-input ${additionalClassNames}`}
         name={camelCasifyString(name)}
         aria-label={camelCasifyString(name)}
         id={kebabCasifyString(name)}

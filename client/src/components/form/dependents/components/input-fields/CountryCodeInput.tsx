@@ -15,7 +15,6 @@ import { FormState } from "../../constants/formProps";
 import { SearchInput } from "./SearchInput";
 
 export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
-  theme,
   showMenu,
   setShowMenu,
   countryImage,
@@ -87,14 +86,15 @@ export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
   }, [showMenu]);
 
   return (
-    <div
-      className={`country-code-input-wrapper ${theme}-country-code-input z-index-2`}
-    >
+    <div className={`country-code-input-wrapper z-index-2`}>
       <button
         className="toggle-country-code-menu"
         style={{ backgroundImage: `url(${countryImage})` }}
         id="toggle-country-code-menu"
-        onClick={() => setShowMenu(!showMenu)}
+        onClick={(e) => {
+          e.preventDefault();
+          setShowMenu(!showMenu);
+        }}
       ></button>
       {showMenu === false ? (
         <></>
@@ -104,7 +104,6 @@ export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
             name="Country Code Search Bar"
             additionalClassNames="country-code-search-bar"
             label="Search Country Code"
-            theme={theme}
             required={false}
             setStateHook={setCountryCodeSearchParams}
             setErrorHook={setCountryCodeSearchErrors}

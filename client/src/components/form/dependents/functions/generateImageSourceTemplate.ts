@@ -2,10 +2,10 @@
 import { PhoneNumberCountryCode } from "../constants/formProps";
 
 const getImgUrl = (fileName: string, fileExtension: string = "svg"): string => {
-  const imgUrl = new URL(
-    `../../assets/icons/country-flags/${fileName}.${fileExtension}`,
-    import.meta.url
-  ).href;
+  // Construct the relative path from the root directory
+  const relativePath = `src/assets/images/icons/country-flags/${fileName}.${fileExtension}`;
+  // Construct the full URL based on the root of your project
+  const imgUrl = new URL(relativePath, window.location.origin).href;
   return imgUrl;
 };
 

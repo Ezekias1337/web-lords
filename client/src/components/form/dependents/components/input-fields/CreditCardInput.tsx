@@ -23,7 +23,6 @@ export const CreditCardInput: FC<CreditCardFieldProps> = ({
   name,
   label,
   additionalClassNames = "",
-  theme,
   columns = "6",
   defaultValue = "",
   required,
@@ -133,7 +132,6 @@ export const CreditCardInput: FC<CreditCardFieldProps> = ({
       label={label}
       additionalClassNames={`credit-card-input ${additionalClassNames}`}
       placeholder="•••• •••• •••• ••••"
-      theme={theme}
       columns={columns}
       defaultValue={defaultValue}
       required={required}

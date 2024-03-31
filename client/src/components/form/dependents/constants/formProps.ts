@@ -16,7 +16,6 @@ export interface InputFieldProps {
   label: string;
   additionalClassNames?: string;
   placeholder?: string;
-  theme: string;
   columns?: string;
   defaultValue?: string;
   value?: string;
@@ -132,7 +131,6 @@ export interface PhoneNumberFlag {
 }
 
 export interface CountryCodeInputFieldProps {
-  theme: string;
   showMenu: boolean;
   setShowMenu: SetStateHookBoolean;
   countryImage: string;

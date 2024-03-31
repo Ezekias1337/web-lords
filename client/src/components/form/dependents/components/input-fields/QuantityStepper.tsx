@@ -12,7 +12,6 @@ import { TextInput } from "./TextInput";
 
 export const QuantityStepper: FC<InputFieldProps> = ({
   name,
-  theme,
   columns = "6",
   defaultValue = "",
   setStateHook,

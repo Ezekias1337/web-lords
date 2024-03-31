@@ -1,16 +1,11 @@
 // Library Imports
-import { FC, useState, useEffect, useRef } from "react";
+import { FC, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // Interfaces and Types
 import { InputFieldProps } from "../../constants/formProps";
-import {
-  phoneNumberPattern,
-  numberOnlyPattern,
-} from "../../../../../../../shared/constants/regexPatterns";
+import { numberOnlyPattern } from "../../../../../../../shared/constants/regexPatterns";
 import { phoneNumberAutocomplete } from "../../constants/formAutocompleteStrings";
-import { FormUpdateEvent } from "../../functions/forms/handleFormChange";
 // Components
 import { TextInput } from "./TextInput";
 import { CountryCodeInput } from "./CountryCodeInput";
@@ -28,16 +23,15 @@ import { CountryCodeInput } from "./CountryCodeInput";
     ! Should make country code display inside the text field and be undeletable
 */
 
-interface BackspacePresentObject {
+/* interface BackspacePresentObject {
   isPresent: boolean;
   spacesToDelete: number;
-}
+} */
 
 export const PhoneNumberInput: FC<InputFieldProps> = ({
   name,
   label,
   additionalClassNames = "",
-  theme,
   columns = "6",
   defaultValue = "",
   required,
@@ -55,7 +49,6 @@ export const PhoneNumberInput: FC<InputFieldProps> = ({
         label={label}
         additionalClassNames={`phone-number-input z-index-1 ${additionalClassNames}`}
         placeholder="5555555555"
-        theme={theme}
         columns={columns}
         defaultValue={defaultValue}
         required={required}
@@ -68,7 +61,6 @@ export const PhoneNumberInput: FC<InputFieldProps> = ({
         setErrorHook={setErrorHook}
         childrenToRender={[
           <CountryCodeInput
-            theme={theme}
             key={`${name}-country-code-selector`}
             showMenu={showMenu}
             setShowMenu={setShowMenu}
@@ -78,13 +70,14 @@ export const PhoneNumberInput: FC<InputFieldProps> = ({
             setCountryCode={setCountryCode}
           />,
           <div
-            className={`flag-separator ${theme}-separator`}
+            className={`flag-separator`}
             key={`${name}-flag-selector`}
           ></div>,
           <FontAwesomeIcon
             icon={showMenu === false ? faChevronDown : faChevronUp}
-            className={`country-code-arrow country-arrow-${theme}`}
+            className={`country-code-arrow`}
             onClick={() => setShowMenu(!showMenu)}
+            size="lg"
             key={`${name}-menu-arrow`}
           />,
         ]}

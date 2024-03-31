@@ -12,7 +12,6 @@ export const SearchInput: FC<InputFieldProps> = ({
   label,
   additionalClassNames,
   placeholder = "Search...",
-  theme,
   columns = "6",
   defaultValue = "",
   required = false,
@@ -29,7 +28,6 @@ export const SearchInput: FC<InputFieldProps> = ({
       label={label}
       additionalClassNames={`search-input ${additionalClassNames}`}
       placeholder={placeholder}
-      theme={theme}
       columns={columns}
       defaultValue={defaultValue}
       required={required}

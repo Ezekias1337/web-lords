@@ -19,7 +19,6 @@ export const TextAreaInput: FC<InputFieldProps> = ({
   label,
   additionalClassNames = "",
   placeholder,
-  theme,
   defaultValue = "",
   inputMode = "text",
   maxLength = 100,
@@ -31,15 +30,15 @@ export const TextAreaInput: FC<InputFieldProps> = ({
   };
 
   return (
-    <div className={`mt-2 input-wrapper`}>
+    <div className={`input-wrapper`}>
       <label
         htmlFor={kebabCasifyString(name)}
-        className={`form-label ${theme}-label`}
+        className={`form-label`}
       >
         {label}
       </label>
       <textarea
-        className={`input-field ${theme}-input ${additionalClassNames}`}
+        className={`input-field ${additionalClassNames}`}
         name={camelCasifyString(name)}
         id={kebabCasifyString(name)}
         placeholder={placeholder}

@@ -9,39 +9,44 @@
   Base Styling
 */
 
-.input-field {
-  border-radius: $border-radius;
+::placeholder {
+  color: $primary-700;
+  opacity: 1; /* Firefox */
 }
 
-
-.icon-input-left {
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  width: 25px !important;
-  height: 25px !important;
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: $primary-700;
 }
 
-.icon-input-right {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
-  width: 25px !important;
-  height: 25px !important;
-}
-
-.light-icon {
-  color: $primary-500;
-}
-
-.dark-icon {
-  color: $primary-100;
-}
-
-.input-wrapper {
+div.input-wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
+
+  .input-field {
+    border-radius: $border-radius;
+  }
+
+  .icon-input {
+    color: $primary-500;
+  }
+
+  .icon-input-left {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    width: 25px !important;
+    height: 25px !important;
+  }
+
+  .icon-input-right {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 25px !important;
+    height: 25px !important;
+  }
 }
 
 .input-field {
@@ -50,6 +55,9 @@
   padding-left: 20px;
   padding-right: 55px;
   transition: 0.2s ease-in-out;
+  background-color: $neutral-800;
+  border: 1px solid $primary-500;
+  color: $primary-500;
 }
 
 .input-field:focus-visible {
@@ -58,6 +66,7 @@
 
 .form-label {
   font-size: 24px;
+  color: $primary-500;
 }
 
 .form button:not(.toggle-password-visibility-button) {
@@ -70,59 +79,48 @@
   font-weight: bold;
 }
 
+textarea {
+  resize: vertical; /* Allow resizing horizontally and vertically */
+  overflow: auto; /* Display scrollbars when content overflows */
+}
+
+/* Style the handle */
+textarea::-webkit-resizer {
+  background-size: 20px;
+  background-image: url("../../../../assets/images/icons/textarea-resize-icon.svg"); /* Set the background color of the handle */
+}
+
+textarea::-moz-resizer {
+  width: 2px; /* Set the width of the handle */
+  height: 2px; /* Set the height of the handle */
+  background-color: $primary-500; /* Set the background color of the handle */
+}
+
+textarea::-ms-resizer {
+  width: 2px; /* Set the width of the handle */
+  height: 2px; /* Set the height of the handle */
+  background-color: $primary-500; /* Set the background color of the handle */
+}
 /* 
   Select Input
 */
+
+.select-wrapper {
+  position: relative;
+
+  svg {
+    color: $primary-500;
+    position: absolute;
+    top: 60%;
+    right: 5%;
+    pointer-events: none;
+  }
+}
 
 select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-repeat: no-repeat;
-  background-position-y: 67%;
-  background-position-x: 97%;
-}
-
-select.light-input {
-  background-image: url("../../../assets/icons/Dropdown_Arrow_Blue.svg");
-}
-
-select.dark-input {
-  background-image: url("../../../assets/icons/Dropdown_Arrow_White.svg");
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-@media (max-width: 576px) {
-  select {
-    background-size: 4.75%;
-  }
-}
-
-@media (min-width: 576px) {
-  select {
-    background-size: 7%;
-  }
-}
-
-@media (min-width: 768px) {
-  select {
-    background-size: 5.5%;
-  }
-}
-
-@media (min-width: 992px) {
-  select {
-    background-size: 3.75%;
-  }
-}
-
-@media (min-width: 1200px) {
-  select {
-    background-size: 3%;
-  }
 }
 
 /* 
@@ -204,11 +202,11 @@ div.country-code-input-wrapper {
   }
 
   .country-code-arrow {
-    left: 13%;
+    left: 9%;
   }
 
   .flag-separator {
-    left: 18%;
+    left: 13%;
   }
 }
 
@@ -240,12 +238,6 @@ div.country-code-input-wrapper {
   }
 }
 
-.country-code-input-wrapper {
-  position: absolute;
-  top: 59%;
-  left: 3%;
-}
-
 .country-code-input-wrapper,
 .country-code-icon {
   width: 40px;
@@ -273,16 +265,9 @@ div.country-code-input-wrapper {
 
 .country-code-arrow {
   position: absolute;
-  top: 68%;
+  top: 60%;
   z-index: 5;
-}
-
-.country-arrow-light {
   color: $primary-500;
-}
-
-.country-arrow-dark {
-  color: $primary-100;
 }
 
 .flag-separator {
@@ -292,17 +277,14 @@ div.country-code-input-wrapper {
   top: 48%;
   z-index: 5;
   pointer-events: none;
-}
-
-.light-separator {
   background-color: $primary-500;
 }
 
-.dark-separator {
-  background-color: $primary-100;
-}
-
 .country-code-input-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 2.5%;
+
   .toggle-country-code-menu {
     width: 100%;
     height: 100%;
@@ -310,56 +292,42 @@ div.country-code-input-wrapper {
     background-repeat: no-repeat;
     border: none;
     margin-top: 0px;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+    //padding-top: 20px;
+  }
+
+  div.input-wrapper .icon-input-right {
+    bottom: 15%;
   }
 }
 
 .country-code-label {
-  font-size: 18px;
+  font-size: $body;
+  color: $primary-500;
+  padding-left: 10px;
 }
 
 .country-code-option {
   border-bottom: 1.5px solid;
   display: flex;
   align-items: center;
+  background-color: $neutral-800;
+  border-color: $primary-500;
+
+  &:hover {
+    background-color: $primary-300;
+
+    .country-code-label {
+      color: $neutral-500;
+    }
+  }
 }
 
 .country-code-menu-wrapper {
   background-color: $primary-100;
   border: 1.5px solid $primary-500;
+  border-radius: $border-radius;
 }
-.country-code-label {
-  color: $primary-500;
-}
-.country-code-option {
-  border-color: $primary-500;
-}
-.country-code-option:hover {
-  background-color: $primary-300;
-
-  .country-code-label {
-    color: $neutral-500;
-  }
-}
-
-/* .dark-country-code-input {
-  .country-code-menu-wrapper {
-    background-color: $primary-color;
-    border: 1.5px solid $neutral;
-  }
-  .country-code-label {
-    color: $light-gray;
-  }
-  .country-code-option {
-    border-color: $neutral;
-  }
-  .country-code-option:hover {
-    background-color: $neutral;
-    .country-code-label {
-      color: $primary-color;
-    }
-  }
-} */
 
 .form-button-container {
   button:nth-of-type(2) {

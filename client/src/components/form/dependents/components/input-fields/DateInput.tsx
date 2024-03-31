@@ -13,7 +13,6 @@ export const DateInput: FC<InputFieldProps> = ({
   label,
   additionalClassNames,
   placeholder = "mm/dd/yyyy",
-  theme,
   columns = "6",
   defaultValue = "",
   required,
@@ -27,7 +26,6 @@ export const DateInput: FC<InputFieldProps> = ({
       label={label}
       additionalClassNames={`date-input ${additionalClassNames}`}
       placeholder={placeholder}
-      theme={theme}
       columns={columns}
       defaultValue={defaultValue}
       required={required}
