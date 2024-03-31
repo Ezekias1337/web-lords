@@ -3,8 +3,13 @@
 .about-us {
   background-color: $neutral-900;
 
+  h2 {
+    text-align: center;
+  }
+
   p {
     font-size: $header-3;
+    line-height: 40px;
   }
 
   .our-story-wrapper,

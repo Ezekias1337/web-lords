@@ -96,7 +96,9 @@ export const Button: FC<ButtonProps> = ({
   return (
     <button
       className={`button ${leftIcon === true ? "icon-left" : ""} 
-      ${rightIcon === true ? "icon-right" : ""} ${variant}-button  ${
+      ${rightIcon === true ? "icon-right" : ""} ${variant}-button  
+      ${loading === true ? "button-loading" : ""}
+      ${
         additionalClassNames !== undefined ? additionalClassNames : ""
       } ${buttonSize}-button`}
       disabled={disabled || loading}

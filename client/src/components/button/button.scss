@@ -34,6 +34,14 @@
     font-size: $header-3;
   }
 
+  &.button-loading {
+    pointer-events: none;
+
+    div {
+      min-width: 50px;
+    }
+  }
+
   &.primary-button {
     background-color: $primary-500;
     color: $primary-900;
