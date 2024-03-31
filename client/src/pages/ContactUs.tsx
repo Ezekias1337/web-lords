@@ -241,7 +241,7 @@ const ContactUs = () => {
           formState={formInputData}
           formErrors={formErrorData}
           button1Text="Submit"
-          button1Variant="primary"
+          button1Variant="primary-dark"
           button1Loading={submissionInProgress}
           customSubmitFunction={(e) =>
             createNewConsultation(

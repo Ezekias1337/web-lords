@@ -84,10 +84,11 @@ export interface FormProps {
   button1Text: string;
   button1Variant:
     | "primary"
-    | "secondary"
-    | "tertiary"
-    | "quinternary"
+    | "primary-dark"
+    | "warning"
+    | "info"
     | "neutral"
+    | "neutral-dark"
     | "success"
     | "error";
   button1Loading?: boolean;
@@ -95,10 +96,11 @@ export interface FormProps {
   button2Type?: "button" | "reset";
   button2Variant?:
     | "primary"
-    | "secondary"
-    | "tertiary"
-    | "quinternary"
+    | "primary-dark"
+    | "warning"
+    | "info"
     | "neutral"
+    | "neutral-dark"
     | "success"
     | "error";
   button2Loading?: boolean;
