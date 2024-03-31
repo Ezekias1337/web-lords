@@ -56,7 +56,7 @@ const AboutUs = () => {
         </p>
         <div className="button-wrapper">
           <Button
-            variant="primary-dark"
+            variant="neutral-dark"
             buttonSize="large"
             text="Get In Touch"
             url="/contact-us"
