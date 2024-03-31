@@ -63,6 +63,7 @@ export interface InputFieldProps {
   setStateHook: SetStateHookForm;
   setErrorHook: SetStateHookForm;
   handleInputChange?: ChangeEventHandler<HTMLInputElement>;
+  ref?: React.RefObject<HTMLInputElement>;
 }
 
 export interface InputFieldPropsState {

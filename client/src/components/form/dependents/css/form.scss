@@ -187,7 +187,19 @@ div.country-code-input-wrapper {
   }
 }
 
-@media (max-width: 576px) {
+.phone-number-input {
+  padding-left: 30%;
+}
+
+.country-code-arrow {
+  left: 17%;
+}
+
+.flag-separator {
+  left: 25%;
+}
+
+/* @media (max-width: 576px) {
   .phone-number-input {
     padding-left: 30%;
   }
@@ -270,7 +282,7 @@ div.country-code-input-wrapper {
   .flag-separator {
     left: 15%;
   }
-}
+} */
 
 .country-code-input-wrapper,
 .country-code-icon {
