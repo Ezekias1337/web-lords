@@ -5,6 +5,7 @@
 import NavBar from "../components/general-page-layout/navbar/Navbar";
 import Footer from "../components/general-page-layout/footer/Footer";
 import Hero from "../components/page-specific/home/Hero";
+import BusinessIntroduction from "../components/page-specific/home/BusinessIntroduction";
 // CSS
 import "../css/page-specific/home.scss";
 /* 
@@ -16,7 +17,7 @@ const Home = () => {
     <div className="home-page">
       <NavBar />
       <Hero />
-      <h1>Bring Your Business Into the Modern Age</h1>
+      <BusinessIntroduction />
       <Footer />
     </div>
   );
