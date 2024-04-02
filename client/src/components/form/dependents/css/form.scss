@@ -33,6 +33,10 @@ form {
   display: grid;
   gap: 20px;
   grid-template-columns: 1fr 1fr;
+  
+  label.form-label {
+    padding-bottom: 10px;
+  }
 
   .column-6-field {
     grid-column: span 1;
@@ -72,6 +76,11 @@ div.input-wrapper {
   }
 }
 
+select.input-field {
+  height: 49.4px;
+  padding: 10px;
+}
+
 .input-field {
   font-size: 18px;
   padding: 10px;
@@ -88,6 +97,10 @@ div.input-wrapper {
   &:active {
     box-shadow: 0px 4px 3px 0px $primary-600;
   }
+}
+
+.input-field:not(textarea, select) {
+  height: 28px;
 }
 
 .input-field:focus-visible {
@@ -188,18 +201,18 @@ div.country-code-input-wrapper {
 }
 
 .phone-number-input {
-  padding-left: 30%;
+  padding-left: 22%;
 }
 
 .country-code-arrow {
-  left: 17%;
+  left: 12%;
 }
 
 .flag-separator {
-  left: 25%;
+  left: 18%;
 }
 
-/* @media (max-width: 576px) {
+@media (max-width: 576px) {
   .phone-number-input {
     padding-left: 30%;
   }
@@ -282,7 +295,7 @@ div.country-code-input-wrapper {
   .flag-separator {
     left: 15%;
   }
-} */
+}
 
 .country-code-input-wrapper,
 .country-code-icon {
@@ -320,7 +333,7 @@ div.country-code-input-wrapper {
   width: 1.5px;
   height: 48px;
   position: absolute;
-  top: 48%;
+  top: 44%;
   z-index: 5;
   pointer-events: none;
   background-color: $primary-500;
@@ -328,7 +341,7 @@ div.country-code-input-wrapper {
 
 .country-code-input-wrapper {
   position: absolute;
-  top: 50%;
+  top: 54%;
   left: 2.5%;
 
   .toggle-country-code-menu {
@@ -340,10 +353,11 @@ div.country-code-input-wrapper {
     margin-top: 0px;
     margin-bottom: 20px;
     //padding-top: 20px;
+  
   }
 
   div.input-wrapper .icon-input-right {
-    bottom: 15%;
+    bottom: 24%;
   }
 }
 
@@ -361,10 +375,10 @@ div.country-code-input-wrapper {
   border-color: $primary-500;
 
   &:hover {
-    background-color: $primary-300;
+    background-color: $primary-500;
 
     .country-code-label {
-      color: $neutral-500;
+      color: $neutral-800;
     }
   }
 }
