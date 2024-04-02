@@ -3,7 +3,15 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export interface ButtonProps {
   text?: string;
-  variant: string;
+  variant:
+    | "primary"
+    | "primary-dark"
+    | "warning"
+    | "info"
+    | "neutral"
+    | "neutral-dark"
+    | "success"
+    | "error";
   icon?: IconProp;
   leftIcon?: boolean;
   rightIcon?: boolean;

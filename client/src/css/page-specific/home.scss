@@ -8,6 +8,7 @@
 
     @media (max-width: 768px) {
       height: 50vh;
+      padding-top: 20px;
     }
 
     .background-container {
@@ -29,10 +30,6 @@
     }
 
     h1.hero-header {
-      position: absolute;
-      top: 50%;
-      left: 50%; /* Set left to 50% */
-      transform: translate(-50%, -50%);
       color: $neutral-100;
       text-align: center;
     }
@@ -85,16 +82,76 @@
       background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-7.svg");
     }
   }
-  
-  
+
   section.business-introduction {
     background-color: $neutral-700;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    
+
     p {
       color: $neutral-200;
-      font-size: $header-3;
+      @media screen and (min-width: 768px) {
+        font-size: $header-3;
+      }
+    }
+  }
+
+  section.available-tiers {
+    background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    animation: changeAvailableTiersBackground 10s infinite;
+    animation-timing-function: ease-in-out;
+
+    h1.page-title {
+      color: $neutral-200;
+    }
+
+    @media (max-width: 768px) {
+      background-position-x: center;
+      background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+      animation-name: changeAvailableTiersBackgroundMobile;
+    }
+
+    .option-card-wrapper {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    @keyframes changeAvailableTiersBackground {
+      0% {
+        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+      }
+      20% {
+        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-2.svg");
+      }
+      40% {
+        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-3.svg");
+      }
+      60% {
+        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-4.svg");
+      }
+      80% {
+        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-5.svg");
+      }
+    }
+
+    @keyframes changeAvailableTiersBackgroundMobile {
+      0% {
+        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+      }
+      20% {
+        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-2.svg");
+      }
+      40% {
+        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-3.svg");
+      }
+      60% {
+        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-4.svg");
+      }
+      80% {
+        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-5.svg");
+      }
     }
   }
 }

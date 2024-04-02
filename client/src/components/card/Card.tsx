@@ -1,5 +1,5 @@
 // Library Imports
-import { FC, useEffect, useState, ReactNode } from "react";
+import { FC, useEffect, useState, ReactNode, Fragment } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Interfaces and Types
@@ -17,26 +17,30 @@ type CardProps = {
   button1Text?: string;
   button1Variant?:
     | "primary"
-    | "secondary"
-    | "tertiary"
-    | "quinternary"
+    | "primary-dark"
+    | "warning"
+    | "info"
     | "neutral"
+    | "neutral-dark"
     | "success"
     | "error";
   button1OnClick?: Function;
   button1Icon?: IconProp;
+  button1Link?: string;
   button2Text?: string;
   button2Type?: "button" | "reset";
   button2Variant?:
     | "primary"
-    | "secondary"
-    | "tertiary"
-    | "quinternary"
+    | "primary-dark"
+    | "warning"
+    | "info"
     | "neutral"
+    | "neutral-dark"
     | "success"
     | "error";
   button2OnClick?: Function;
   button2Icon?: IconProp;
+  button2Link?: string;
   buttonSize?: "small" | "medium" | "large";
   imageSource: string;
 };
@@ -50,10 +54,12 @@ export const Card: FC<CardProps> = ({
   button1Variant,
   button1OnClick,
   button1Icon,
+  button1Link,
   button2Text,
   button2Variant,
   button2OnClick,
   button2Icon,
+  button2Link,
   buttonSize,
   imageSource,
 }) => {
@@ -80,25 +86,47 @@ export const Card: FC<CardProps> = ({
     return (
       <div className="card image-and-body-card">
         <img src={imageSource} />
-        <h3>{headerText}</h3>
-        {bodyText ? <p>{bodyText}</p> : <></>}
-        <div className="card-button-wrapper display-flex">
+        <div className="card-text-wrapper display-flex">
+          <h3>{headerText}</h3>
+          {bodyText ? (
+            <p>
+              {bodyText.split("/n").map((line, index) => (
+                <Fragment key={index}>
+                  {line}
+                  <br />
+                  <br />
+                </Fragment>
+              ))}
+            </p>
+          ) : (
+            <></>
+          )}
+        </div>
+
+        <div className="card-button-wrapper button-wrapper">
           {buttonCount >= 1 && button1OnClick ? (
             <Button
               text={button1Text !== undefined ? button1Text : undefined}
-              variant="neutral"
+              variant={button1Variant ? button1Variant : "neutral"}
               icon={button1Icon ? button1Icon : undefined}
               leftIcon={button1Icon ? true : false}
               buttonSize="medium"
               onClickHandler={button1OnClick}
             />
           ) : (
-            <></>
+            <Button
+              text={button1Text !== undefined ? button1Text : undefined}
+              variant={button1Variant ? button1Variant : "neutral"}
+              icon={button1Icon ? button1Icon : undefined}
+              leftIcon={button1Icon ? true : false}
+              buttonSize="medium"
+              url={button1Link}
+            />
           )}
           {buttonCount === 2 && button2OnClick ? (
             <Button
               text={button2Text !== undefined ? button2Text : undefined}
-              variant="error"
+              variant={button2Variant ? button2Variant : "error"}
               icon={button2Icon ? button2Icon : undefined}
               leftIcon={button2Icon ? true : false}
               buttonSize="medium"

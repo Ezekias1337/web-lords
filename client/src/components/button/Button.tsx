@@ -31,19 +31,19 @@ export const Button: FC<ButtonProps> = ({
       case "primary":
         loaderVariant = "neutral";
         break;
-      case "secondary":
+      case "primary-dark":
         loaderVariant = "neutral";
         break;
-      case "tertiary":
+      case "warning":
         loaderVariant = "neutral";
         break;
-      case "quarternary":
-        loaderVariant = "neutral";
-        break;
-      case "quinternary":
+      case "info":
         loaderVariant = "neutral";
         break;
       case "neutral":
+        loaderVariant = "neutral";
+        break;
+      case "neutral-dark":
         loaderVariant = "primary";
         break;
       case "success":
