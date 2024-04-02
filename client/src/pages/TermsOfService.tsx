@@ -19,20 +19,24 @@ const TermsOfService = () => {
           bound by these Terms. If you disagree with any part of the Terms, you
           may not access the Service.
         </p>
-        <h2>1. Use of the Service</h2>
+        <h2 className="padding-top-40 padding-bottom-20">
+          1. Use of the Service
+        </h2>
         <p>
           You agree to use the Service only for lawful purposes and in
           accordance with these Terms and any applicable laws and regulations.
           You are solely responsible for your conduct while using the Service.
         </p>
-        <h2>2. Intellectual Property</h2>
+        <h2 className="padding-top-40 padding-bottom-20">
+          2. Intellectual Property
+        </h2>
         <p>
           The Service and its original content, features, and functionality are
           owned by Weblords and are protected by international copyright,
           trademark, patent, trade secret, and other intellectual property or
           proprietary rights laws.
         </p>
-        <h2>3. User Content</h2>
+        <h2 className="padding-top-40 padding-bottom-20">3. User Content</h2>
         <p>
           You may be able to contribute content, such as comments or feedback,
           to the Service ("User Content"). By submitting User Content, you grant
@@ -42,7 +46,9 @@ const TermsOfService = () => {
           distribute, perform, and display such User Content in connection with
           the Service.
         </p>
-        <h2>4. Limitation of Liability</h2>
+        <h2 className="padding-top-40 padding-bottom-20">
+          4. Limitation of Liability
+        </h2>
         <p>
           In no event shall Weblords, nor its directors, employees, partners,
           agents, suppliers, or affiliates, be liable for any indirect,
@@ -58,7 +64,7 @@ const TermsOfService = () => {
           remedy set forth herein is found to have failed of its essential
           purpose.
         </p>
-        <h2>5. Indemnification</h2>
+        <h2 className="padding-top-40 padding-bottom-20">5. Indemnification</h2>
         <p>
           You agree to indemnify and hold Weblords and its affiliates, officers,
           agents, employees, and partners harmless from and against any claims,
@@ -67,7 +73,7 @@ const TermsOfService = () => {
           any way connected with your access to or use of the Service or your
           violation of these Terms.
         </p>
-        <h2>6. Governing Law</h2>
+        <h2 className="padding-top-40 padding-bottom-20">6. Governing Law</h2>
         <p>
           These Terms shall be governed and construed in accordance with the
           laws of [Your Jurisdiction], without regard to its conflict of law
@@ -79,7 +85,9 @@ const TermsOfService = () => {
           Service and supersede and replace any prior agreements we might have
           had between us regarding the Service.
         </p>
-        <h2>7. Changes to Terms</h2>
+        <h2 className="padding-top-40 padding-bottom-20">
+          7. Changes to Terms
+        </h2>
         <p>
           We reserve the right, at our sole discretion, to modify or replace
           these Terms at any time. If a revision is material, we will provide at
@@ -87,7 +95,7 @@ const TermsOfService = () => {
           constitutes a material change will be determined at our sole
           discretion.
         </p>
-        <h2>8. Contact Us</h2>
+        <h2 className="padding-top-40 padding-bottom-20">8. Contact Us</h2>
         <p>
           If you have any questions about these Terms, please contact us at{" "}
           <GeneralLink

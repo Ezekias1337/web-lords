@@ -18,7 +18,10 @@ const PrivacyPolicy = () => {
           collect, use, and safeguard the information you provide to us through
           our website and any associated services.
         </p>
-        <h2>1. Information We Collect:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">
+          1. Information We Collect:
+        </h2>
         <p>
           <strong>a. Personal Information:</strong> We may collect personal
           information such as your name, email address, phone number, and postal
@@ -39,7 +42,10 @@ const PrivacyPolicy = () => {
           help us personalize your experience, analyze trends, and optimize our
           website's functionality.
         </p>
-        <h2>2. How We Use Your Information:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">
+          2. How We Use Your Information:
+        </h2>
         <p>
           <strong>a. Improving User Experience:</strong> We use the information
           collected to provide, maintain, and improve our website, services, and
@@ -56,7 +62,10 @@ const PrivacyPolicy = () => {
           enhance our services, tailor content, and make informed business
           decisions.
         </p>
-        <h2>3. Information Sharing and Disclosure:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">
+          3. Information Sharing and Disclosure:
+        </h2>
         <p>
           <strong>a. Third-Party Service Providers:</strong> We may share your
           information with trusted third-party service providers who assist us
@@ -69,7 +78,10 @@ const PrivacyPolicy = () => {
           when required by law, to respond to legal process, or to protect our
           rights, property, or safety, or that of others.
         </p>
-        <h2>4. Your Choices and Controls:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">
+          4. Your Choices and Controls:
+        </h2>
         <p>
           <strong>a. Cookie Preferences:</strong> You can adjust your browser
           settings to refuse or delete cookies. However, please note that
@@ -82,20 +94,25 @@ const PrivacyPolicy = () => {
           our mailing list by following the instructions included in our emails
           or by contacting us directly.
         </p>
-        <h2>5. Data Security:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">5. Data Security:</h2>
         <p>
           We take appropriate measures to safeguard your personal information
           against unauthorized access, disclosure, alteration, or destruction.
           However, no method of transmission over the internet or electronic
           storage is entirely secure, and we cannot guarantee absolute security.
         </p>
-        <h2>6. Updates to this Privacy Policy:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">
+          6. Updates to this Privacy Policy:
+        </h2>
         <p>
           We reserve the right to update, modify, or revise this Privacy Policy
           at any time. Any changes will be reflected on this page, and we
           encourage you to review this policy periodically for updates.
         </p>
-        <h2>7. Contact Us:</h2>
+
+        <h2 className="padding-top-40 padding-bottom-20">7. Contact Us:</h2>
         <p>
           If you have any questions, concerns, or feedback regarding this
           Privacy Policy or our data practices, please contact us at{" "}
