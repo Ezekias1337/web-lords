@@ -86,6 +86,9 @@
   section.business-introduction {
     background-color: $neutral-700;
 
+    h1.page-title {
+      color: $neutral-100;
+    }
     p {
       color: $neutral-200;
       @media screen and (min-width: 768px) {
@@ -104,7 +107,7 @@
     animation-timing-function: ease-in-out;
 
     h1.page-title {
-      color: $neutral-200;
+      color: $neutral-100;
     }
 
     @media (max-width: 768px) {

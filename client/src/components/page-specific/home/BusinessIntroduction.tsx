@@ -1,8 +1,12 @@
+// Components
+import { PageHeader } from "../../general-page-layout/page-header/PageHeader";
 import { Button } from "../../button/Button";
 
 const BusinessIntroduction = () => {
   return (
-    <section className="business-introduction padding-left-and-right padding-top-80 padding-bottom-80">
+    <section className="business-introduction padding-left-and-right padding-top-40 padding-bottom-80">
+      <PageHeader title="What We Provide" />
+      
       <p>
         Our websites are fully optimized for mobile devices, providing a
         seamless browsing experience on any screen size. Plus, our future-proof
