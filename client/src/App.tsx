@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 // Admin Pages
+import Login from "./pages/Login";
 //404 Page
 import PageNotFound from "./pages/PageNotFound";
 // Link scroll fix
@@ -36,8 +37,8 @@ const App = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route path="/terms-of-service" element={<TermsOfService />}></Route>
         {/* Admin Only */}
-        {/* <Route path="/login" element={<Login />}></Route>
-        <Route path="/admin-home" element={<AdminHome />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        {/*<Route path="/admin-home" element={<AdminHome />}></Route>
         <Route path="/manage-employees" element={<ManageEmployees />}></Route>
         <Route path="/view-new-cases" element={<ViewNewCases />}></Route>
         <Route path="/analytics-dashboard" element={<Home />}></Route>

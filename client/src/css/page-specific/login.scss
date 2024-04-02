@@ -1,0 +1,24 @@
+@import "../../css/variables";
+
+.login {
+  .login-wrapper {
+    background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: bottom;
+    animation: changeAvailableTiersBackground 10s infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    h1.page-title {
+      color: $neutral-100;
+    }
+
+    @media (max-width: 768px) {
+      background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+      animation-name: changeAvailableTiersBackgroundMobile;
+      animation-duration: 20s;
+    }
+  }
+}
