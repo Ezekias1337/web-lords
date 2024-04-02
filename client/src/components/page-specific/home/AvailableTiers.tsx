@@ -9,7 +9,9 @@
 // Interfaces and Types
 
 // Assets
-
+import ThumbsUp from "../../../assets/images/icons/card-icons/thumbs-up-solid.svg";
+import HandShake from "../../../assets/images/icons/card-icons/handshake-solid.svg";
+import Trophy from "../../../assets/images/icons/card-icons/trophy-solid.svg";
 // Components
 import { PageHeader } from "../../general-page-layout/page-header/PageHeader";
 import { Card } from "../../card/Card";
@@ -30,7 +32,7 @@ const AvailableTiers = () => {
           button1Text="Get Started"
           button1Link="/contact-us"
           button1Variant="primary-dark"
-          imageSource="https://cdn.mos.cms.futurecdn.net/vBqsjHWH9NnkiUEwtQjUxL-1200-80.jpg"
+          imageSource={ThumbsUp}
         />
         <Card
           cardVariant="imageAndBody"
@@ -40,7 +42,7 @@ const AvailableTiers = () => {
           button1Text="Get Started"
           button1Link="/contact-us"
           button1Variant="primary-dark"
-          imageSource="https://cdn.mos.cms.futurecdn.net/vBqsjHWH9NnkiUEwtQjUxL-1200-80.jpg"
+          imageSource={HandShake}
         />
         <Card
           cardVariant="imageAndBody"
@@ -50,7 +52,7 @@ const AvailableTiers = () => {
           button1Text="Get Started"
           button1Link="/contact-us"
           button1Variant="primary-dark"
-          imageSource="https://cdn.mos.cms.futurecdn.net/vBqsjHWH9NnkiUEwtQjUxL-1200-80.jpg"
+          imageSource={Trophy}
         />
       </div>
     </section>

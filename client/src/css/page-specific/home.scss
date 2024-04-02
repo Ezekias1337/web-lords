@@ -198,6 +198,13 @@
         animation: fadeInAndUp 1s ease forwards;
         animation-timeline: view();
         animation-range: entry;
+
+        &.image-and-body-card {
+          img {
+            max-width: 20%;
+            height: 52px;
+          }
+        }
       }
 
       div.card:nth-of-type(2) {
