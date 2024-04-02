@@ -75,7 +75,7 @@
     }
 
     @media (max-width: 768px) {
-      .footer-navigation-column:first-of-type {
+      .footer-navigation-column:nth-of-type(2) {
         display: none;
       }
     }

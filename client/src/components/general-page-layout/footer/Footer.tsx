@@ -19,7 +19,7 @@ const Footer = () => {
       <div className="logo-and-social-row display-flex align-items-center">
         <div className="footer-logo-col">
           <Link to="/">
-            <img src={logo} alt="Logo" className="footer-logo"/>
+            <img src={logo} alt="Logo" className="footer-logo" />
           </Link>
         </div>
 
@@ -45,14 +45,9 @@ const Footer = () => {
               openInNewTab={false}
             />
             <FooterLink
-              linkText="123@weblords.com"
+              linkText="Email"
               url="mailto: 123@weblords.com"
               openInNewTab={false}
-            />
-            <FooterLink
-              linkText="Directions"
-              url="https://maps.app.goo.gl/aTdS2Zs6xNrL2zXRA"
-              openInNewTab={true}
             />
           </div>
         </div>
@@ -66,13 +61,8 @@ const Footer = () => {
               openInNewTab={false}
             />
             <FooterLink
-              linkText="Practice Areas"
-              url="/practice-areas"
-              openInNewTab={false}
-            />
-            <FooterLink
-              linkText="Google Reviews"
-              url="/client-reviews"
+              linkText="Free Consultation"
+              url="/contact-us"
               openInNewTab={false}
             />
           </div>
@@ -84,14 +74,13 @@ const Footer = () => {
 
           <div className="footer-link-column display-flex">
             <FooterLink
-              linkText="Free Consultation"
-              url="/contact-us"
+              linkText="Client Reviews"
+              url="/client-reviews"
               openInNewTab={false}
             />
-            <FooterLink linkText="FAQs" url="/faqs" openInNewTab={false} />
             <FooterLink
-              linkText="Community Interactions"
-              url="/community-involvement"
+              linkText="Our Work"
+              url="/our-work"
               openInNewTab={false}
             />
           </div>

@@ -11,8 +11,8 @@ const AboutUs = () => {
     <section className="about-us">
       <NavBar />
       <PageHeader title="About Us" />
-      <div className="our-story-wrapper padding-left-and-right">
-        <h2 className="full-flex">Our Story</h2>
+      <div className="our-story-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
+        <h2 className="full-flex padding-bottom-40">Our Story</h2>
         <p>
           We are a web agency founded by two brothers who share a deep passion
           for technology and a commitment to helping small to medium-sized
@@ -22,8 +22,8 @@ const AboutUs = () => {
           that come with building and maintaining a strong online presence.
         </p>
       </div>
-      <div className="our-mission-wrapper padding-left-and-right">
-        <h2 className="full-flex">Our Mission</h2>
+      <div className="our-mission-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
+        <h2 className="full-flex padding-bottom-40">Our Mission</h2>
         <p>
           At Weblords, our mission is clear: we want to empower businesses with
           the tools they need to thrive in today's competitive landscape.
@@ -32,8 +32,8 @@ const AboutUs = () => {
           here to help.
         </p>
       </div>
-      <div className="why-choose-us-wrapper padding-left-and-right">
-        <h2 className="full-flex">Why Choose Us</h2>
+      <div className="why-choose-us-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
+        <h2 className="full-flex padding-bottom-40">Why Choose Us</h2>
         <p>
           What sets us apart from other web agencies is our personalized
           approach and unwavering commitment to excellence. When you choose
@@ -44,8 +44,8 @@ const AboutUs = () => {
           reflects your unique brand identity and meets your specific goals.
         </p>
       </div>
-      <div className="get-in-touch-wrapper padding-left-and-right">
-        <h2 className="full-flex">Get In Touch</h2>
+      <div className="get-in-touch-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
+        <h2 className="full-flex padding-bottom-40">Get In Touch</h2>
         <p>
           Ready to take your online presence to the next level? We invite you to
           get in touch with us today to learn more about how Weblords can help
@@ -54,7 +54,7 @@ const AboutUs = () => {
           we're here to help. Let's work together to turn your vision into
           reality.
         </p>
-        <div className="button-wrapper">
+        <div className="button-wrapper padding-top-40">
           <Button
             variant="neutral-dark"
             buttonSize="large"

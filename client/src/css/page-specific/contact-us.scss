@@ -1,5 +1,9 @@
 @import "../../css/variables";
 
 .contact-us {
-    background-color: $neutral-900;
+  background-color: $neutral-900;
+
+  h1.page-title {
+    color: $primary-500;
+  }
 }

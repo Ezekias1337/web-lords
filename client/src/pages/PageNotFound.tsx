@@ -11,7 +11,7 @@ const PageNotFound = () => {
   return (
     <section className="page-not-found">
       <NavBar />
-      <div className="page-not-found-wrapper">
+      <div className="page-not-found-wrapper padding-left-and-right">
         <h1 className="page-not-found-warning full-flex">Woops!</h1>
 
         <h3 className="page-not-found-explanation full-flex">
