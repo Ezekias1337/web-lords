@@ -144,8 +144,27 @@
 
     p {
       color: $neutral-200;
+
       @media screen and (min-width: 768px) {
         font-size: $header-3;
+      }
+    }
+
+    div.business-introduction-text-wrapper {
+      animation: fadeInAndUp 1s ease forwards;
+      animation-timeline: view();
+      animation-range-start: 0px;
+      animation-range-end: contain;
+    }
+
+    @keyframes fadeInAndUp {
+      0% {
+        opacity: 0;
+        transform: translateY(150px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0px);
       }
     }
   }
@@ -173,6 +192,21 @@
     .option-card-wrapper {
       flex-wrap: wrap;
       gap: 20px;
+
+      div.card {
+        opacity: 0;
+        animation: fadeInAndUp 1s ease forwards;
+        animation-timeline: view();
+        animation-range: entry;
+      }
+
+      div.card:nth-of-type(2) {
+        animation-delay: 0.25s;
+      }
+
+      div.card:nth-of-type(3) {
+        animation-delay: 0.5s;
+      }
     }
 
     @keyframes changeAvailableTiersBackground {
