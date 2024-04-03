@@ -7,23 +7,12 @@ import env from "./util/validateEnv";
 import MongoStore from "connect-mongo";
 import mongoose from "mongoose";
 import cors from "cors";
-import { Server } from "socket.io";
 import http from "http";
-
 // Function Imports
-import setupWebSocket from "./websocket";
 import { generateOriginUrl } from "../../shared/helpers/generateOriginUrl";
-// Types
-import {
-  ServerToClientEvents,
-  ClientToServerEvents,
-  InterServerEvents,
-  SocketData,
-} from "@shared/constants/interfaces/SocketInterfaces";
-
 //Routes
 import userRoutes from "./routes/users";
-import cases from "./routes/cases";
+import websites from "./routes/websites";
 
 // Server Configuration
 const app = express();
@@ -64,7 +53,7 @@ app.use(
 );
 
 // Use Imported routes
-app.use("/api/cases", cases);
+app.use("/api/websites", websites);
 app.use("/api/users", userRoutes);
 
 // Allow credentials in CORS configuration
@@ -72,27 +61,9 @@ app.options("*", cors(corsOptions));
 
 //Connect to DB
 const database = mongoose.connect(MONGO_URL).then(() => {
-  const server = http.createServer(app); // Pass the express app to createServer
+  const server = http.createServer(app);
 
   server.listen(BACKEND_PORT, () => {
     console.log(`Listening on port: ${BACKEND_PORT}`);
   });
-
-  const io = new Server<
-    ClientToServerEvents,
-    ServerToClientEvents,
-    InterServerEvents,
-    SocketData
-  >(server, {
-    cors: {
-      origin: ORIGIN_URL,
-      methods: ["GET", "POST", "PATCH", "DELETE"],
-      credentials: true,
-    },
-    pingInterval: 30000,
-    pingTimeout: 15000,
-  });
-  app.set("io", io);
-
-  setupWebSocket(io);
 });
