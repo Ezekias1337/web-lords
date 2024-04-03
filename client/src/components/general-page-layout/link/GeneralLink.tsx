@@ -9,6 +9,7 @@ type LinkProps = {
   url: To;
   openInNewTab: boolean;
   additionalClassNames?: string;
+  variant?: string;
 };
 
 export const GeneralLink: FC<LinkProps> = ({
@@ -16,11 +17,12 @@ export const GeneralLink: FC<LinkProps> = ({
   url,
   openInNewTab,
   additionalClassNames,
+  variant = "primary",
 }) => {
   return (
     <Link
       to={url}
-      className={`general-link ${
+      className={`general-link ${variant}-link ${
         additionalClassNames !== undefined ? additionalClassNames : ""
       }`}
       target={openInNewTab ? "_blank" : ""}
