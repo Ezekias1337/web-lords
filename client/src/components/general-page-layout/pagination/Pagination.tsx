@@ -71,7 +71,7 @@ export const Pagination: FC<PaginationProps> = (props) => {
           </li>
 
           {arrayOfPages.map((page, index) => (
-            <li className="page-item" key={index}>
+            <li className={`page-item page-number-${page}`} key={index}>
               <a
                 className={`${
                   index === props.currentPage - 1 ? "active " : ""

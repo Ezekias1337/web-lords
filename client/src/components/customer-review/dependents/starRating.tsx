@@ -8,7 +8,9 @@ interface StarRatingProps {
   totalStars: number; // Number of total stars (default to 5)
 }
 
-export const StarRating: FC<StarRatingProps> = ({ rating, totalStars }) => {
+export const StarRating: FC<StarRatingProps> = ({
+  rating /* , totalStars */,
+}) => {
   const filledStarColor = "#e3d552";
   const emptyStarColor = "#b4b4b4";
   const maxRating = 5;

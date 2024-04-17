@@ -83,6 +83,9 @@ export const CountryCodeInput: FC<CountryCodeInputFieldProps> = ({
 
   useEffect(() => {
     setFilteredOptions(phoneNumberCountryCodes);
+    if (countryCodeSearchErrors) {
+      console.log(countryCodeSearchErrors);
+    }
   }, [showMenu]);
 
   return (

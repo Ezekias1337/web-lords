@@ -4,7 +4,7 @@ import { Action, Reducer } from "redux";
 import {
   UPDATE_PENDING_CASES,
   UPDATE_CASES_RESET,
-  updatePendingCases,
+  /* updatePendingCases, */
 } from "../../action-creators/caseCreators";
 // Interfaces and Types
 import { CaseReturnedFromDB } from "../../../constants/interfaces/case";

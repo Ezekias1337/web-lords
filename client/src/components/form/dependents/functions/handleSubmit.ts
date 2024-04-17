@@ -15,7 +15,7 @@ export const handleSubmit = async (
   apiEndpoint: string,
   method: "GET" | "POST" | "PUT" | "PATCH" | "DELETE",
   headers: HeadersInit,
-  redirectUrl?: string,
+  /* redirectUrl?: string, */
   setSubmissionSuccessful?: Dispatch<SetStateAction<boolean>>,
   setPostingToServerInProgress?: Dispatch<SetStateAction<boolean>>
 ) => {

@@ -69,7 +69,7 @@ export const Form: FC<FormProps> = ({
             {
               "Content-Type": "application/json",
             },
-            redirectUrl,
+            /* redirectUrl, */
             setSubmissionSuccessful,
             setPostingToServerInProgress
           );

@@ -1,12 +1,10 @@
 // Library Imports
-import { FC, useEffect, useState, ReactNode, Fragment } from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FC, Fragment } from "react";
 // Interfaces and Types
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // Components
 import { Button } from "../button/Button";
-// CSS
+// CSShis
 import "./card.scss";
 
 type CardProps = {
@@ -59,8 +57,8 @@ export const Card: FC<CardProps> = ({
   button2Variant,
   button2OnClick,
   button2Icon,
-  button2Link,
-  buttonSize,
+/*   button2Link,
+  buttonSize, */
   imageSource,
 }) => {
   if (cardVariant === "mobile") {
