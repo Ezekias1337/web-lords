@@ -1,31 +1,26 @@
 import { InferSchemaType, model, Schema } from "mongoose";
 
-const caseSchema = new Schema(
+const websiteSchema = new Schema(
   {
     name: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     emailAddress: { type: String, required: true },
-    preferredLanguage: {
+    needLogo: {
+      type: ["Yes", "No"],
+      required: true,
+    },
+    websiteDescription: {
       type: String,
       required: true,
     },
-    dateOfIncident: {
-      type: String,
+    websiteStatus: {
+      type: ["Not Started", "In Progress", "Completed", "Rejected"],
       required: true,
     },
-    treatmentStatus: {
-      type: String,
-      required: true,
-    },
-    incidentDescription: {
-      type: String,
-      required: true,
-    },
-    caseStatus: { type: String, required: true },
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
 
-type Case = InferSchemaType<typeof caseSchema>;
+type Website = InferSchemaType<typeof websiteSchema>;
 
-export default model<Case>("Case", caseSchema);
+export default model<Website>("Website", websiteSchema);

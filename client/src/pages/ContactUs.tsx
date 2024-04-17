@@ -111,11 +111,11 @@ const ContactUs = () => {
         required: true,
       },
       {
-        name: "Business Logo",
-        label: "Business Logo",
+        name: "Need Logo",
+        label: "Need Logo",
         additionalClassNames: "",
         defaultValue: "Have Logo",
-        placeholder: "Business Logo",
+        placeholder: "Need Logo",
         columns: "6",
         type: "dropdown",
         inputType: "text",
@@ -146,7 +146,7 @@ const ContactUs = () => {
 
     const haveLogoField = {
       ...tempInputFields[3],
-      dropdownOptions: ["Have Logo", "Need Logo"],
+      dropdownOptions: ["Yes", "No"],
     };
 
     tempInputFields[3] = haveLogoField;

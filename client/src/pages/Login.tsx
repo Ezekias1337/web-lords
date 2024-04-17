@@ -68,7 +68,7 @@ const Login = () => {
     <section className="login">
       <NavBar />
 
-      <div className="login-wrapper padding-left-and-right padding-bottom-80">
+      <div className="login-wrapper padding-bottom-80">
         <PageHeader title="Login" />
         <Form
           inputFields={arrayOfInputFields}
@@ -79,17 +79,18 @@ const Login = () => {
           formState={formInputData}
           formErrors={formErrorData}
           button1Text="Log In"
-          button1Variant="neutral"
+          button1Variant="primary-dark"
           formBackgroundIsImage={true}
           buttonSize="large"
           redirectUrl="/admin-home"
         />
-        <div className="forgot-password-wrapper container">
+        <div className="forgot-password-wrapper full-flex justify-content-left padding-left-and-right">
           <GeneralLink
             text="Forgot your password?"
             url="/forgot-password"
             openInNewTab={false}
             additionalClassNames="position-relative"
+            variant="neutral"
           />
         </div>
       </div>
