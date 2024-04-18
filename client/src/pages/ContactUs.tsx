@@ -47,7 +47,7 @@ const ContactUs = () => {
 
   useEffect(() => {
     if (submissionSuccessful) {
-      navigate("/case-submitted");
+      navigate("/website-submitted");
     }
   }, [submissionSuccessful, navigate]);
 
@@ -158,7 +158,7 @@ const ContactUs = () => {
     argument1: arrayOfInputFields,
     argument2: formInputData,
     argument3: setFormErrorData,
-    argument4: "/api/cases/create-case",
+    argument4: "/api/websites/create-website",
     argument5: "POST",
   };
 
@@ -227,7 +227,7 @@ const ContactUs = () => {
       {arrayOfInputFields ? (
         <Form
           inputFields={arrayOfInputFields}
-          apiEndpoint="/api/cases/create-case"
+          apiEndpoint="/api/websites/create-website"
           formId="contact-us-form"
           setStateHook={setFormInputData}
           setErrorHook={setFormErrorData}
@@ -242,7 +242,7 @@ const ContactUs = () => {
               arrayOfInputFields,
               formInputData,
               setFormErrorData,
-              "/api/cases/create-case",
+              "/api/websites/create-website",
               "POST"
             )
           }

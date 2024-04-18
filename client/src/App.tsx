@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // User Pages
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
+import WebsiteSubmitted from "./pages/WebsiteSubmitted"
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
@@ -23,7 +24,7 @@ const App = () => {
         {/* Client Facing */}
         <Route path="/" element={<Home />}></Route>
         <Route path="/contact-us" element={<ContactUs />}></Route>
-        {/* <Route path="/case-submitted" element={<CaseSubmitted />}></Route> */}
+        <Route path="/website-submitted" element={<WebsiteSubmitted />}></Route>
         <Route path="/about-us" element={<AboutUs />}></Route>
 
         {/*<Route path="/practice-areas" element={<PracticeAreas />}></Route>
