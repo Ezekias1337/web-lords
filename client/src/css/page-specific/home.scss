@@ -13,7 +13,7 @@
     .background-container {
       width: 100%;
       height: 100%;
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position-y: bottom;
@@ -23,7 +23,7 @@
       position: relative;
 
       @media (max-width: 768px) {
-        background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves.svg");
+        background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg");
         animation-name: changeHeroBackgroundMobile;
       }
     }
@@ -75,62 +75,62 @@
 
   @keyframes changeHeroBackground {
     0% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg");
       background-position-y: 30%;
     }
     14.2857% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-2.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg");
       background-position-y: 40%;
     }
     28.5714% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-3.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg");
       background-position-y: 50%;
     }
     42.8571% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-4.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg");
       background-position-y: 60%;
     }
     57.1429% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-5.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg");
       background-position-y: 70%;
     }
     71.4286% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-6.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg");
       background-position-y: 80%;
     }
     85.7143% {
-      background-image: url("../../assets/images/svgs/layered-waves/desktop/layered-waves-7.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg");
       background-position-y: 90%;
     }
   }
 
   @keyframes changeHeroBackgroundMobile {
     0% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg");
       background-position-y: 30%;
     }
     14.2857% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-2.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg");
       background-position-y: 40%;
     }
     28.5714% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-3.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg");
       background-position-y: 50%;
     }
     42.8571% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-4.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg");
       background-position-y: 60%;
     }
     57.1429% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-5.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg");
       background-position-y: 70%;
     }
     71.4286% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-6.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg");
       background-position-y: 80%;
     }
     85.7143% {
-      background-image: url("../../assets/images/svgs/layered-waves/mobile/layered-waves-7.svg");
+      background-image: url("../../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg");
       background-position-y: 90%;
     }
   }
@@ -170,7 +170,7 @@
   }
 
   section.available-tiers {
-    background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+    background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene.svg");
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -184,7 +184,7 @@
     }
 
     @media (max-width: 768px) {
-      background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+      background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene.svg");
       animation-name: changeAvailableTiersBackgroundMobile;
       animation-duration: 20s;
     }
@@ -218,46 +218,46 @@
 
     @keyframes changeAvailableTiersBackground {
       0% {
-        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene.svg");
         background-position-x: 0%;
       }
       20% {
-        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-2.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene-2.svg");
         background-position-x: 20%;
       }
       40% {
-        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-3.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene-3.svg");
         background-position-x: 40%;
       }
       60% {
-        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-4.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene-4.svg");
         background-position-x: 60%;
       }
       80% {
-        background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene-5.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene-5.svg");
         background-position-x: 80%;
       }
     }
 
     @keyframes changeAvailableTiersBackgroundMobile {
       0% {
-        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene.svg");
         background-position-x: 0%;
       }
       20% {
-        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-2.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene-2.svg");
         background-position-x: 20%;
       }
       40% {
-        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-3.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene-3.svg");
         background-position-x: 40%;
       }
       60% {
-        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-4.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene-4.svg");
         background-position-x: 60%;
       }
       80% {
-        background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene-5.svg");
+        background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene-5.svg");
         background-position-x: 80%;
       }
     }

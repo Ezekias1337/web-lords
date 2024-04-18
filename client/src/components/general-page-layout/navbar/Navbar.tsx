@@ -8,7 +8,7 @@ import { AnimatedNavLink } from "./dependents/AnimatedNavLink";
 // CSS
 import "./navbar.scss";
 // Assets and Images
-import logo from "../../../assets/images/logo/logo.png";
+import logo from "../../../../public/assets/images/logo/logo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

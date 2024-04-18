@@ -2,7 +2,7 @@
 
 .login {
   .login-wrapper {
-    background-image: url("../../assets/images/svgs/blob-scene/desktop/blob-scene.svg");
+    background-image: url("../../../public/assets/images/svgs/blob-scene/desktop/blob-scene.svg");
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,7 +16,7 @@
     }
 
     @media (max-width: 768px) {
-      background-image: url("../../assets/images/svgs/blob-scene/mobile/blob-scene.svg");
+      background-image: url("../../../public/assets/images/svgs/blob-scene/mobile/blob-scene.svg");
       animation-name: changeAvailableTiersBackgroundMobile;
       animation-duration: 20s;
     }
