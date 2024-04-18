@@ -1,5 +1,6 @@
 // Library Imports
 import { RequestHandler } from "express";
+import { Session } from "express-session";
 import createHttpError from "http-errors";
 import bcrypt from "bcrypt";
 // Models
@@ -17,10 +18,12 @@ interface LoginBody {
   password?: string;
 }
 
+interface CustomSession extends Session {
+  userId?: string;
+}
+
 export const getAuthenticatedUser: RequestHandler = async (req, res, next) => {
-  console.log("Session Data for Debugging: ");
-  console.log(req.session);
-  const authenticatedUserIdFromSession = req.session.userId;
+  const authenticatedUserIdFromSession = (req.session as CustomSession).userId;
 
   try {
     if (!authenticatedUserIdFromSession) {
@@ -163,7 +166,7 @@ export const login: RequestHandler<
       throw createHttpError(401, "Invalid credentials");
     }
 
-    req.session.userId = user._id;
+    (req.session as CustomSession).userId = user._id.toString();
     console.log("Session after login: ", req.session);
 
     // Set a cookie with the user's ID
@@ -173,7 +176,6 @@ export const login: RequestHandler<
       sameSite: "None", // This allows cross-origin requests
     });
     console.log("Cookie set in response: ", res.getHeaders()["set-cookie"]);
-    
 
     res.status(201).json(user);
   } catch (error) {
