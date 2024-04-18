@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "nodemon --watch \"src/**\" --ext \"ts,json\" --exec \"ts-node src/index.ts\"",
     "build": "tsc",
     "deploy": "npm install && npm run build",
-    "preview": "vite preview"
+    "start": "node dist/server/src/index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
