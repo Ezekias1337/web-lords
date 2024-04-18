@@ -26,10 +26,10 @@ const Footer = () => {
         <div className="social-col">
           <FooterSocialIcon
             icon={faInstagram}
-            url="https://www.instagram.com/"
+            url="https://www.instagram.com/weblordshub?igsh=MzRlODBiNWFlZA=="
           />
           <FooterSocialIcon icon={faFacebook} url="https://www.facebook.com/" />
-          <FooterSocialIcon icon={faXTwitter} url="https://twitter.com/" />
+          <FooterSocialIcon icon={faXTwitter} url="https://twitter.com/WebLordsHub" />
         </div>
       </div>
       <div className="footer-navigation display-flex justify-content-space-around">
@@ -89,7 +89,7 @@ const Footer = () => {
       <div className="footer-copywrite-disclaimer-wrapper align-items-center display-flex justify-content-space-between">
         <div className="copywrite-container display-flex">
           <small className="copywrite-disclaimer">
-            © 2024 by Web Lords LLC | Created by Code Decoded
+            © 2024 by WebLords LLC | Created by Code Decoded
           </small>
         </div>
 

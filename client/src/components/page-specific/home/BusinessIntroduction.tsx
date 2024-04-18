@@ -26,6 +26,7 @@ const BusinessIntroduction = () => {
           buttonSize="large"
           text="Get Started"
           additionalClassNames="animated-button"
+          url="/contact-us"
         />
       </div>
     </section>
