@@ -223,6 +223,8 @@ const ContactUs = () => {
     <div className="contact-us">
       <NavBar />
       <PageHeader title="Contact Us" />
+      <h3 className="become-a-web-lord full-flex">Become a WebLord today!</h3>
+      
 
       {arrayOfInputFields ? (
         <Form

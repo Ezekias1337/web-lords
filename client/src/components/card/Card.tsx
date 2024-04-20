@@ -4,7 +4,7 @@ import { FC, Fragment } from "react";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 // Components
 import { Button } from "../button/Button";
-// CSShis
+// CSS
 import "./card.scss";
 
 type CardProps = {
