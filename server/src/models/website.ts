@@ -5,11 +5,11 @@ const websiteSchema = new Schema(
     name: { type: String, required: true },
     phoneNumber: { type: String, required: true },
     emailAddress: { type: String, required: true },
-    needLogo: {
-      type: ["Yes", "No"],
+    doYouNeedALogo: {
+      type: ["I need a new logo", "I already have a logo"],
       required: true,
     },
-    websiteDescription: {
+    describeYourDreamWebsite: {
       type: String,
       required: true,
     },

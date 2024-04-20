@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
       <PageHeader title="Privacy Policy" />
       <div className="privacy-policy-wrapper padding-left-and-right">
         <p>
-          At WebLords LLC, we value your privacy and are committed to protecting
+          At WebLord LLC, we value your privacy and are committed to protecting
           your personal information. This Privacy Policy outlines how we
           collect, use, and safeguard the information you provide to us through
           our website and any associated services.

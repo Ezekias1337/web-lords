@@ -9,12 +9,12 @@ import WebsiteModel from "../models/website";
 import env from "../util/validateEnv";
 
 interface websiteCreationBody {
-  name?: string;
-  phoneNumber?: string;
-  emailAddress?: string;
-  needLogo?: string;
-  websiteDescription?: string;
-  websiteStatus?: string;
+  name: string;
+  phoneNumber: string;
+  emailAddress: string;
+  doYouNeedALogo: string;
+  describeYourDreamWebsite: string;
+  websiteStatus: string;
 }
 
 export const getWebsite: RequestHandler = async (req, res, next) => {
@@ -131,8 +131,8 @@ export const createWebsite: RequestHandler<
   const name = req.body.name;
   const phoneNumber = req.body.phoneNumber;
   const emailAddress = req.body.emailAddress;
-  const needLogo = req.body.needLogo;
-  const websiteDescription = req.body.websiteDescription;
+  const needLogo = req.body.doYouNeedALogo;
+  const websiteDescription = req.body.describeYourDreamWebsite;
   const websiteStatus = "Not Started";
 
   const io: Server = req.app.get("io");

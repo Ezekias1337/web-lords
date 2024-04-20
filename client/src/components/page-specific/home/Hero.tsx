@@ -12,7 +12,6 @@ const Hero = () => {
           <span>Age</span>
         </h1>
       </div>
-      ;
     </section>
   );
 };

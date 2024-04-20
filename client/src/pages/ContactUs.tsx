@@ -111,11 +111,11 @@ const ContactUs = () => {
         required: true,
       },
       {
-        name: "Need Logo",
-        label: "Need Logo",
+        name: "Do You Need A Logo",
+        label: "Do You Need A Logo",
         additionalClassNames: "",
-        defaultValue: "Have Logo",
-        placeholder: "Need Logo",
+        defaultValue: "I need a new logo",
+        placeholder: "I need a new logo",
         columns: "6",
         type: "dropdown",
         inputType: "text",
@@ -127,10 +127,10 @@ const ContactUs = () => {
         required: true,
       },
       {
-        name: "Website Description",
-        label: "Website Description",
+        name: "Describe Your Dream Website",
+        label: "Describe Your Dream Website",
         additionalClassNames: "",
-        placeholder: "Website Description",
+        placeholder: "Website details here...",
         columns: "12",
         type: "textArea",
         inputType: "text",
@@ -146,7 +146,7 @@ const ContactUs = () => {
 
     const haveLogoField = {
       ...tempInputFields[3],
-      dropdownOptions: ["Yes", "No"],
+      dropdownOptions: ["I need a new logo", "I already have a logo"],
     };
 
     tempInputFields[3] = haveLogoField;
