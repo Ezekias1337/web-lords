@@ -28,7 +28,7 @@ const Footer = () => {
             icon={faInstagram}
             url="https://www.instagram.com/weblordshub?igsh=MzRlODBiNWFlZA=="
           />
-          <FooterSocialIcon icon={faFacebook} url="https://www.facebook.com/" />
+          <FooterSocialIcon icon={faFacebook} url="https://www.facebook.com/profile.php?id=61558349652239&mibextid=ZbWKwL" />
           <FooterSocialIcon
             icon={faXTwitter}
             url="https://twitter.com/WebLordsHub"
@@ -49,7 +49,7 @@ const Footer = () => {
             />
             <FooterLink
               linkText="Email"
-              url="mailto: 123@weblords.com"
+              url="mailto: overlord@weblordshub.com"
               openInNewTab={false}
             />
           </div>
