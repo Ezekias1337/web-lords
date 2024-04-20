@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 // Functions, Helpers, Utils and Hooks
 import useDeviceInfo from "../hooks/useDeviceInfo";
+// Constants
 // Components
 import NavBar from "../components/general-page-layout/navbar/Navbar";
 import Footer from "../components/general-page-layout/footer/Footer";
@@ -19,29 +20,54 @@ import "../css/page-specific/home.scss";
 
 const Home = () => {
   const userInfo = useDeviceInfo();
+  const isDev = import.meta.env.VITE_IS_DEV;
 
   // Array of image URLs to preload
   let imageUrls: string[] = [];
   if (userInfo.device === "Desktop") {
-    imageUrls = [
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
-      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-    ];
+    if (isDev === "TRUE") {
+      imageUrls = [
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
+        "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
+      ];
+    } else {
+      imageUrls = [
+        "./assets/images/svgs/layered-waves/desktop/layered-waves.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
+        "./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
+      ];
+    }
   } else {
-    imageUrls = [
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
-      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-    ];
+    if (isDev === "TRUE") {
+      imageUrls = [
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
+        "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
+      ];
+    } else {
+      imageUrls = [
+        "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
+      ];
+    }
   }
 
   // State to track the loading status of images
@@ -66,7 +92,6 @@ const Home = () => {
         console.error("Error loading images:", error);
       }
     };
-
     preloadImages();
   }, []);
 
