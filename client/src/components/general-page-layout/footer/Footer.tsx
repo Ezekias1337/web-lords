@@ -29,7 +29,10 @@ const Footer = () => {
             url="https://www.instagram.com/weblordshub?igsh=MzRlODBiNWFlZA=="
           />
           <FooterSocialIcon icon={faFacebook} url="https://www.facebook.com/" />
-          <FooterSocialIcon icon={faXTwitter} url="https://twitter.com/WebLordsHub" />
+          <FooterSocialIcon
+            icon={faXTwitter}
+            url="https://twitter.com/WebLordsHub"
+          />
         </div>
       </div>
       <div className="footer-navigation display-flex justify-content-space-around">
@@ -75,12 +78,12 @@ const Footer = () => {
           <div className="footer-link-column display-flex">
             <FooterLink
               linkText="Client Reviews"
-              url="/client-reviews"
+              url="/under-construction"
               openInNewTab={false}
             />
             <FooterLink
               linkText="Our Work"
-              url="/our-work"
+              url="/under-construction"
               openInNewTab={false}
             />
           </div>
@@ -88,9 +91,7 @@ const Footer = () => {
       </div>
       <div className="footer-copywrite-disclaimer-wrapper align-items-center display-flex justify-content-space-between">
         <div className="copywrite-container display-flex">
-          <small className="copywrite-disclaimer">
-            © 2024 by WebLords LLC | Created by Code Decoded
-          </small>
+          <small className="copywrite-disclaimer">© 2024 by WebLords LLC</small>
         </div>
 
         <div className="footer-bottom-navigation-wrapper display-flex justify-content-right">

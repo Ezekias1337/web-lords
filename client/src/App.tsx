@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // User Pages
 import Home from "./pages/Home";
 import ContactUs from "./pages/ContactUs";
-import WebsiteSubmitted from "./pages/WebsiteSubmitted"
+import WebsiteSubmitted from "./pages/WebsiteSubmitted";
 import AboutUs from "./pages/AboutUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import UnderConstruction from "./pages/UnderConstruction";
 // Admin Pages
 import Login from "./pages/Login";
 //404 Page
@@ -37,6 +38,10 @@ const App = () => {
         <Route path="/our-results" element={<OurResults />}></Route> */}
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route path="/terms-of-service" element={<TermsOfService />}></Route>
+        <Route
+          path="/under-construction"
+          element={<UnderConstruction />}
+        ></Route>
         {/* Admin Only */}
         <Route path="/login" element={<Login />}></Route>
         {/*<Route path="/admin-home" element={<AdminHome />}></Route>
