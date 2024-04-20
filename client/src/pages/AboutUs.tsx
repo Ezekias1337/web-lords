@@ -25,7 +25,7 @@ const AboutUs = () => {
       <div className="our-mission-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
         <h2 className="full-flex padding-bottom-40">Our Mission</h2>
         <p>
-          At Weblords, our mission is clear: we want to empower businesses with
+          At WebLords, our mission is clear: we want to empower businesses with
           the tools they need to thrive in today's competitive landscape.
           Whether you're a startup looking to establish your brand or an
           established company seeking to enhance your online presence, we're
@@ -37,7 +37,7 @@ const AboutUs = () => {
         <p>
           What sets us apart from other web agencies is our personalized
           approach and unwavering commitment to excellence. When you choose
-          Weblords, you're not just getting a website – you're getting a
+          WebLords, you're not just getting a website – you're getting a
           dedicated team of experts who will work tirelessly to bring your
           vision to life. From the initial consultation to the final launch,
           we'll be with you every step of the way, ensuring that your website
@@ -48,7 +48,7 @@ const AboutUs = () => {
         <h2 className="full-flex padding-bottom-40">Get In Touch</h2>
         <p>
           Ready to take your online presence to the next level? We invite you to
-          get in touch with us today to learn more about how Weblords can help
+          get in touch with us today to learn more about how WebLords can help
           your business thrive in the digital world. Whether you have questions
           about our services or you're ready to get started on your project,
           we're here to help. Let's work together to turn your vision into

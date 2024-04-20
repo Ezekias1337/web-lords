@@ -14,7 +14,7 @@ const TermsOfService = () => {
       <div className="terms-of-service-wrapper padding-left-and-right">
         <p>
           These Terms of Service ("Terms") govern your access to and use of the
-          Weblords website and any associated services (collectively referred to
+          WebLords LLC website and any associated services (collectively referred to
           as the "Service"). By accessing or using the Service, you agree to be
           bound by these Terms. If you disagree with any part of the Terms, you
           may not access the Service.
@@ -32,7 +32,7 @@ const TermsOfService = () => {
         </h2>
         <p>
           The Service and its original content, features, and functionality are
-          owned by Weblords and are protected by international copyright,
+          owned by WebLords LLC and are protected by international copyright,
           trademark, patent, trade secret, and other intellectual property or
           proprietary rights laws.
         </p>
@@ -40,7 +40,7 @@ const TermsOfService = () => {
         <p>
           You may be able to contribute content, such as comments or feedback,
           to the Service ("User Content"). By submitting User Content, you grant
-          Weblords a worldwide, non-exclusive, royalty-free, perpetual,
+          WebLords LLC a worldwide, non-exclusive, royalty-free, perpetual,
           irrevocable, and fully sublicensable license to use, reproduce,
           modify, adapt, publish, translate, create derivative works from,
           distribute, perform, and display such User Content in connection with
@@ -50,7 +50,7 @@ const TermsOfService = () => {
           4. Limitation of Liability
         </h2>
         <p>
-          In no event shall Weblords, nor its directors, employees, partners,
+          In no event shall WebLords LLC, nor its directors, employees, partners,
           agents, suppliers, or affiliates, be liable for any indirect,
           incidental, special, consequential, or punitive damages, including
           without limitation, loss of profits, data, use, goodwill, or other
@@ -66,7 +66,7 @@ const TermsOfService = () => {
         </p>
         <h2 className="padding-top-40 padding-bottom-20">5. Indemnification</h2>
         <p>
-          You agree to indemnify and hold Weblords and its affiliates, officers,
+          You agree to indemnify and hold WebLords LLC and its affiliates, officers,
           agents, employees, and partners harmless from and against any claims,
           liabilities, damages, losses, and expenses, including without
           limitation, reasonable legal and accounting fees, arising out of or in
