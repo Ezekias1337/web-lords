@@ -1,25 +1,88 @@
 // Library Imports
 //import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
 // Functions, Helpers, Utils and Hooks
+import useDeviceInfo from "../hooks/useDeviceInfo";
 // Components
 import NavBar from "../components/general-page-layout/navbar/Navbar";
 import Footer from "../components/general-page-layout/footer/Footer";
+import { Loader } from "../components/general-page-layout/loader/Loader";
 import Hero from "../components/page-specific/home/Hero";
 import BusinessIntroduction from "../components/page-specific/home/BusinessIntroduction";
 import AvailableTiers from "../components/page-specific/home/AvailableTiers";
 // CSS
 import "../css/page-specific/home.scss";
+
 /* 
   TODO: Add Cookies disclaimer
 */
 
 const Home = () => {
+  const userInfo = useDeviceInfo();
+
+  // Array of image URLs to preload
+  let imageUrls: string[] = [];
+  if (userInfo.device === "Desktop") {
+    imageUrls = [
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
+      "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
+    ];
+  } else {
+    imageUrls = [
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
+      "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
+    ];
+  }
+
+  // State to track the loading status of images
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  // Function to preload images
+  useEffect(() => {
+    const loadImage = (url: string) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve(void 0);
+        img.onerror = () => reject();
+        img.src = url;
+      });
+    };
+
+    const preloadImages = async () => {
+      try {
+        await Promise.all(imageUrls.map(loadImage));
+        setImagesLoaded(true);
+      } catch (error) {
+        console.error("Error loading images:", error);
+      }
+    };
+
+    preloadImages();
+  }, []);
+
   return (
     <div className="home-page">
       <NavBar />
-      <Hero />
-      <BusinessIntroduction />
-      <AvailableTiers />
+      {!imagesLoaded ? (
+        <Loader variant="primary" />
+      ) : (
+        <>
+          <Hero />
+          <BusinessIntroduction />
+          <AvailableTiers />
+        </>
+      )}
+
       <Footer />
     </div>
   );
