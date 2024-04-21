@@ -28,49 +28,25 @@ const Home = () => {
 
   useEffect(() => {
     if (userInfo.device === "Desktop") {
-      if (isDev === "TRUE") {
-        setImageUrls([
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
-          "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-        ]);
-      } else {
-        setImageUrls([
-          "./assets/images/svgs/layered-waves/desktop/layered-waves.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-        ]);
-      }
+      setImageUrls([
+        "/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
+        "/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
+      ]);
     } else if (userInfo.device === "Mobile") {
-      if (isDev === "TRUE") {
-        setImageUrls([
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
-          "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-        ]);
-      } else {
-        setImageUrls([
-          "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-        ]);
-      }
+      setImageUrls([
+        "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
+        "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
+      ]);
     }
   }, [userInfo, isDev]);
 
@@ -101,22 +77,47 @@ const Home = () => {
 
   return (
     <div className="home-page">
-     <HelmetProvider>
-      <Helmet>
-        <title>WebLords | Home</title>
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-4.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg" as="image" />
-        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg" as="image" />
-        
-      </Helmet>
-      
-     </HelmetProvider>
-     
-      
+      <HelmetProvider>
+        <Helmet>
+          <title>WebLords | Home</title>
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg"
+            as="image"
+          />
+        </Helmet>
+      </HelmetProvider>
+
       <NavBar />
       {!imagesLoaded ? (
         <>
