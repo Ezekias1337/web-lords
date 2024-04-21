@@ -56,6 +56,42 @@ const Home = () => {
             href="/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg"
             as="image"
           />
+          
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-4.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg"
+            as="image"
+          />
+          <link
+            rel="preload"
+            href="/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg"
+            as="image"
+          />
         </Helmet>
       </HelmetProvider>
 
