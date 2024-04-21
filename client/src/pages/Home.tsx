@@ -23,13 +23,12 @@ const Home = () => {
   const isDev = import.meta.env.VITE_IS_DEV;
 
   // Array of image URLs to preload
-  let imageUrls: string[] = [];
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
 
-  console.log(userInfo.device);
-  if (userInfo.device !== undefined) {
+  useEffect(() => {
     if (userInfo.device === "Desktop") {
       if (isDev === "TRUE") {
-        imageUrls = [
+        setImageUrls([
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
@@ -37,9 +36,9 @@ const Home = () => {
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
           "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-        ];
+        ]);
       } else {
-        imageUrls = [
+        setImageUrls([
           "./assets/images/svgs/layered-waves/desktop/layered-waves.svg",
           "./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
           "./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
@@ -47,11 +46,11 @@ const Home = () => {
           "./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
           "./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
           "./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-        ];
+        ]);
       }
-    } else {
+    } else if (userInfo.device === "Mobile") {
       if (isDev === "TRUE") {
-        imageUrls = [
+        setImageUrls([
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
@@ -59,9 +58,9 @@ const Home = () => {
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
           "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-        ];
+        ]);
       } else {
-        imageUrls = [
+        setImageUrls([
           "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
           "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
           "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
@@ -69,10 +68,10 @@ const Home = () => {
           "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
           "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
           "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-        ];
+        ]);
       }
     }
-  }
+  }, [userInfo, isDev]);
 
   // State to track the loading status of images
   const [imagesLoaded, setImagesLoaded] = useState(false);
@@ -82,8 +81,10 @@ const Home = () => {
     const loadImage = (url: string) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
-        img.onload = () => resolve(void 0);
+        console.log("before onLoad");
+        img.onload = () => resolve(undefined);
         img.onerror = () => reject();
+        console.log("After onload");
         img.src = url;
       });
     };
@@ -97,7 +98,7 @@ const Home = () => {
       }
     };
     preloadImages();
-  }, []);
+  }, [imageUrls]);
 
   return (
     <div className="home-page">
