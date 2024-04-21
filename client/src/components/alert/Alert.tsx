@@ -8,20 +8,29 @@ import "./alert.scss";
 type AlertProps = {
   variant?:
     | "primary"
-    | "primaryDark"
+    | "primary-dark"
     | "warning"
     | "info"
     | "neutral"
-    | "neutralDark"
+    | "neutral-dark"
     | "success"
     | "error";
   bodyText: string;
+  additionalClassNames?: string;
 };
 
-export const Alert: FC<AlertProps> = ({ variant = "primary", bodyText }) => {
+export const Alert: FC<AlertProps> = ({
+  variant = "primary",
+  bodyText,
+  additionalClassNames = "",
+}) => {
   return (
-    <div className={`alert ${variant}-alert`}>
-      <span>{bodyText}</span>
+    <div
+      className={`alert-wrapper padding-left-and-right ${additionalClassNames}`}
+    >
+      <aside className={`alert ${variant}-alert`} role="alert">
+        <span>{bodyText}</span>
+      </aside>
     </div>
   );
 };

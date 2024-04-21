@@ -31,6 +31,7 @@ import NavBar from "../components/general-page-layout/navbar/Navbar";
 import Footer from "../components/general-page-layout/footer/Footer";
 import { PageHeader } from "../components/general-page-layout/page-header/PageHeader";
 import { Loader } from "../components/general-page-layout/loader/Loader";
+import { Alert } from "../components/alert/Alert";
 import { Form } from "../components/form/Form";
 // CSS
 import "../css/page-specific/contact-us.scss";
@@ -223,8 +224,11 @@ const ContactUs = () => {
     <div className="contact-us">
       <NavBar />
       <PageHeader title="Contact Us" />
-      <h3 className="become-a-web-lord full-flex">Become a WebLord Today!</h3>
-      
+      <Alert
+        variant="primary-dark"
+        bodyText="Become a WebLord Today!"
+        additionalClassNames="become-a-web-lord-alert text-align-center"
+      />
 
       {arrayOfInputFields ? (
         <Form
