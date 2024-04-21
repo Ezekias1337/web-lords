@@ -1,13 +1,14 @@
 // Library Imports
+import { Helmet, HelmetProvider } from "react-helmet-async";
 //import { useSelector } from "react-redux";
-//import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 // Functions, Helpers, Utils and Hooks
-//import useDeviceInfo from "../hooks/useDeviceInfo";
+import useDeviceInfo from "../hooks/useDeviceInfo";
 // Constants
 // Components
 import NavBar from "../components/general-page-layout/navbar/Navbar";
 import Footer from "../components/general-page-layout/footer/Footer";
-//import { Loader } from "../components/general-page-layout/loader/Loader";
+import { Loader } from "../components/general-page-layout/loader/Loader";
 import Hero from "../components/page-specific/home/Hero";
 import BusinessIntroduction from "../components/page-specific/home/BusinessIntroduction";
 import AvailableTiers from "../components/page-specific/home/AvailableTiers";
@@ -19,11 +20,11 @@ import "../css/page-specific/home.scss";
 */
 
 const Home = () => {
-  /* const userInfo = useDeviceInfo();
-  const isDev = import.meta.env.VITE_IS_DEV; */
+  const userInfo = useDeviceInfo();
+  const isDev = import.meta.env.VITE_IS_DEV;
 
   // Array of image URLs to preload
-  /* const [imageUrls, setImageUrls] = useState<string[]>([]);
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
 
   useEffect(() => {
     if (userInfo.device === "Desktop") {
@@ -71,13 +72,13 @@ const Home = () => {
         ]);
       }
     }
-  }, [userInfo, isDev]); */
+  }, [userInfo, isDev]);
 
   // State to track the loading status of images
-  /* const [imagesLoaded, setImagesLoaded] = useState(false); */
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Function to preload images
-  /* useEffect(() => {
+  useEffect(() => {
     const loadImage = (url: string) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -96,16 +97,30 @@ const Home = () => {
       }
     };
     preloadImages();
-  }, [imageUrls]); */
+  }, [imageUrls]);
 
   return (
     <div className="home-page">
+     <HelmetProvider>
+      <Helmet>
+        <title>WebLords | Home</title>
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-4.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg" as="image" />
+        <link rel="preload" href="./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg" as="image" />
+        
+      </Helmet>
+      
+     </HelmetProvider>
+     
+      
       <NavBar />
-      {/* {!imagesLoaded ? (
+      {!imagesLoaded ? (
         <>
           <Loader variant="primary" />
-          <div className="prefetch"></div>
-          <div className="link-to-preload"></div>
         </>
       ) : (
         <>
@@ -113,12 +128,7 @@ const Home = () => {
           <BusinessIntroduction />
           <AvailableTiers />
         </>
-      )} */}
-      <div className="prefetch"></div>
-      <div className="link-to-preload"></div>
-      <Hero />
-      <BusinessIntroduction />
-      <AvailableTiers />
+      )}
 
       <Footer />
     </div>
