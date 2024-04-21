@@ -266,4 +266,64 @@
       }
     }
   }
+
+  /* This is to preload the images for production so the animation doesn't flicker */
+
+  .link-to-preload {
+    display: none;
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg");
+    background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg");
+  }
+
+  /* Prefetch images */
+  @keyframes prefetch {
+    0% {
+      /* Use the URL of the first background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg");
+    }
+    12.5% {
+      /* Use the URL of the second background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg");
+    }
+    25% {
+      /* Use the URL of the third background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg");
+    }
+    37.5% {
+      /* Use the URL of the fourth background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-4.svg");
+    }
+    50% {
+      /* Use the URL of the fifth background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg");
+    }
+    62.5% {
+      /* Use the URL of the sixth background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg");
+    }
+    75% {
+      /* Use the URL of the seventh background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg");
+    }
+    87.5% {
+      /* Use the URL of the eighth background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-8.svg");
+    }
+    100% {
+      /* Use the URL of the ninth background image */
+      background-image: url("../../../public/assets/images/svgs/layered-waves/desktop/layered-waves-9.svg");
+    }
+  }
+
+  .prefetch {
+    animation: prefetch 0.001s forwards;
+    visibility: hidden;
+    position: absolute;
+    left: -9999px;
+  }
 }

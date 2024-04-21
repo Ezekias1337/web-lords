@@ -102,7 +102,11 @@ const Home = () => {
     <div className="home-page">
       <NavBar />
       {!imagesLoaded ? (
-        <Loader variant="primary" />
+        <>
+          <Loader variant="primary" />
+          <div className="prefetch"></div>
+          <div className="link-to-preload"></div>
+        </>
       ) : (
         <>
           <Hero />
