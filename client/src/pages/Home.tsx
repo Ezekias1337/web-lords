@@ -23,10 +23,13 @@ const Home = () => {
   const isDev = import.meta.env.VITE_IS_DEV;
 
   // Array of image URLs to preload
-  let imageUrls: string[] = [];
-  if (userInfo.device === "Desktop") {
+  //let imageUrls: string[] = [];
+  const [imageUrls, setImageUrls] = useState<string[]>([]);
+
+  console.log(userInfo.device);
+  if (userInfo.device === "Desktop" && userInfo.device !== undefined) {
     if (isDev === "TRUE") {
-      imageUrls = [
+      setImageUrls([
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves.svg",
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
@@ -34,9 +37,9 @@ const Home = () => {
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
         "../../public/assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-      ];
+      ]);
     } else {
-      imageUrls = [
+      setImageUrls([
         "./assets/images/svgs/layered-waves/desktop/layered-waves.svg",
         "./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
         "./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
@@ -44,11 +47,11 @@ const Home = () => {
         "./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
         "./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
         "./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
-      ];
+      ]);
     }
   } else {
     if (isDev === "TRUE") {
-      imageUrls = [
+      setImageUrls([
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves.svg",
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
@@ -56,9 +59,9 @@ const Home = () => {
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
         "../../public/assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-      ];
+      ]);
     } else {
-      imageUrls = [
+      setImageUrls([
         "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
         "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
         "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
@@ -66,7 +69,7 @@ const Home = () => {
         "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
         "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
         "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
-      ];
+      ]);
     }
   }
 
