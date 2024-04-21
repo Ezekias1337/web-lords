@@ -79,18 +79,18 @@ const Home = () => {
 
   // Function to preload images
   useEffect(() => {
-    const loadImage = (url: string) => {
+    /* const loadImage = (url: string) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
         img.onload = () => resolve(undefined);
         img.onerror = () => reject();
         img.src = url;
       });
-    };
+    }; */
 
     const preloadImages = async () => {
       try {
-        await Promise.all(imageUrls.map(loadImage));
+        //await Promise.all(imageUrls.map(loadImage));
         setImagesLoaded(true);
       } catch (error) {
         console.error("Error loading images:", error);
