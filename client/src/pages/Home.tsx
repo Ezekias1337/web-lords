@@ -39,13 +39,13 @@ const Home = () => {
         ]);
       } else {
         setImageUrls([
-          "./assets/images/svgs/layered-waves/desktop/layered-waves.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-2.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-3.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-4.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-5.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-6.svg",
-          "./assets/images/svgs/layered-waves/desktop/layered-waves-7.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-2.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-3.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-4.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-5.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-6.svg",
+          "./images/svgs/layered-waves/desktop/layered-waves-7.svg",
         ]);
       }
     } else if (userInfo.device === "Mobile") {
@@ -61,13 +61,13 @@ const Home = () => {
         ]);
       } else {
         setImageUrls([
-          "./assets/images/svgs/layered-waves/mobile/layered-waves.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-2.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-3.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-4.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-5.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-6.svg",
-          "./assets/images/svgs/layered-waves/mobile/layered-waves-7.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-2.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-3.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-4.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-5.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-6.svg",
+          "./images/svgs/layered-waves/mobile/layered-waves-7.svg",
         ]);
       }
     }
