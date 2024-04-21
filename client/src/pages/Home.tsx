@@ -81,10 +81,8 @@ const Home = () => {
     const loadImage = (url: string) => {
       return new Promise((resolve, reject) => {
         const img = new Image();
-        console.log("before onLoad");
         img.onload = () => resolve(undefined);
         img.onerror = () => reject();
-        console.log("After onload");
         img.src = url;
       });
     };
