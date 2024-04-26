@@ -8,6 +8,7 @@ import Footer from "../components/general-page-layout/footer/Footer";
 import Hero from "../components/page-specific/home/Hero";
 import BusinessIntroduction from "../components/page-specific/home/BusinessIntroduction";
 import AvailableTiers from "../components/page-specific/home/AvailableTiers";
+import HowItWorks from "../components/page-specific/home/HowItWorks";
 // CSS
 import "../css/page-specific/home.scss";
 
@@ -99,6 +100,7 @@ const Home = () => {
       <Hero />
       <BusinessIntroduction />
       <AvailableTiers />
+      <HowItWorks />
 
       <Footer />
     </div>

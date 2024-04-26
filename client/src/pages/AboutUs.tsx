@@ -21,6 +21,9 @@ const AboutUs = () => {
           all sizes. As entrepreneurs ourselves, we understand the challenges
           that come with building and maintaining a strong online presence.
         </p>
+        <p className="padding-top-40">
+        Our Chief Web Developer Code Decoded is an experienced professional who has worked on propietary enterprise systems used by employees on a daily basis.
+        </p>
       </div>
       <div className="our-mission-wrapper padding-left-and-right padding-top-80 padding-bottom-80">
         <h2 className="full-flex padding-bottom-40">Our Mission</h2>

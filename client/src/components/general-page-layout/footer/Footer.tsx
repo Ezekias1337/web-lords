@@ -91,7 +91,7 @@ const Footer = () => {
       </div>
       <div className="footer-copywrite-disclaimer-wrapper align-items-center display-flex justify-content-space-between">
         <div className="copywrite-container display-flex">
-          <small className="copywrite-disclaimer">© 2024 by WebLord LLC</small>
+          <small className="copywrite-disclaimer">© 2024 by WebLord LLC | Created by Code Decoded</small>
         </div>
 
         <div className="footer-bottom-navigation-wrapper display-flex justify-content-right">
